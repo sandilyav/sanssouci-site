@@ -1,0 +1,5 @@
+# Node tooling artifacts
+node_modules/
+
+# macOS
+.DS_Store
