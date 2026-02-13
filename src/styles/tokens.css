@@ -1,0 +1,57 @@
+:root {
+  /* Color palette */
+  --color-background: #f7f1e8;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f3e7d8;
+  --color-foreground: #151b26;
+  --color-text-primary: #151b26;
+  --color-text-muted: #5c6473;
+  --color-text-secondary: #8b95a7;
+  --color-primary: #e65c2f;
+  --color-primary-hover: #cf4f27;
+  --color-border: rgba(15, 27, 38, 0.12);
+  --color-accent: #f5b841;
+  --color-on-primary: #ffffff;
+
+  /* Typography */
+  --font-heading: 'DM Serif Display', 'Playfair Display', serif;
+  --font-body: 'Manrope', 'Inter', system-ui, -apple-system, sans-serif;
+
+  --text-h1: 2.05rem;
+  --text-h2: 1.8rem;
+  --text-h3: 1.35rem;
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+  --text-button: 0.9rem;
+
+  /* Spacing scale */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+
+  /* Layout */
+  --container-max: 1200px;
+  --radius-card: 8px;
+  --radius-button: 24px;
+  --radius-full: 999px;
+  --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.16);
+  --shadow-card: 0 6px 16px rgba(0, 0, 0, 0.14);
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --motion-duration: 240ms;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --text-h1: 2.6rem;
+    --text-h2: 2.15rem;
+    --text-h3: 1.5rem;
+    --text-body: 1.0625rem;
+  }
+}
