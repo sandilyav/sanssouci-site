@@ -5,24 +5,23 @@ const EventsPage = () => (
   <>
     <Section
       eyebrow="Events"
-      title="Waterfront shows, offsites, and wrap parties"
-      subtitle="Mix and match decks, bonfire coves, and floating entries."
+      title="Ways people turn Sans Souci into an event backdrop"
+      subtitle="These are ideas from past use of the space, not a fixed calendar—crews bring their own plans and gear."
     >
       <div className="grid grid-2">
         {weeklyEvents.map((event) => (
           <article key={event.title} className="card">
             <h3>{event.title}</h3>
             <p>{event.detail}</p>
-            <button className="button button-secondary">Feature this week</button>
           </article>
         ))}
       </div>
     </Section>
 
     <Section
-      eyebrow="Recommended modules"
-      title="Build your event stack"
-      subtitle="Combine experience blocks to craft a custom flow."
+      eyebrow="Ideas to mix and match"
+      title="Build your own flow"
+      subtitle="Use these experiences as a menu of possibilities—the actual plan is entirely yours."
     >
       <div className="experience-grid">
         {experiences.map((exp) => (

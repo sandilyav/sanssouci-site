@@ -24,7 +24,7 @@ export type PhotoSpot = {
 export const heroContent = {
   headline: 'Chennai’s creekside escape for small crews',
   subhead:
-    'Sans Souci is a private Ennore Creek campus for offsites, birthdays, and creator days where you can shoot, swim, and slow down without leaving the city.',
+    'Sans Souci is a simple, private corner of Ennore Creek with shade, basic facilities, and kayaks—a rustic spot that film crews, friends, and small teams use as a backdrop for their own plans.',
   primaryCta: 'Explore Photo Spots',
   secondaryCta: 'Plan This Weekend',
   stats: [
@@ -46,9 +46,9 @@ export const experiences: Experience[] = [
     id: 'camping',
     name: 'Camping & Stargaze Nights',
     summary:
-      'Wake up to Ennore Creek, spend the day exploring, and wind down in coastal tents with curated playlists and projection walls.',
+      'If you bring your own tents and gear, the open sand and trees can become a low-key overnight base beside the creek.',
     whyItLooksGood: 'Soft lantern pools and reflective water create natural bokeh for portrait and timelapse shots.',
-    duration: 'Overnight or multi-day residencies',
+    duration: 'Overnight, if you choose to camp',
     bestTime: 'Golden hour arrival, bonfire nights',
     idealFor: ['Friend crews', 'Creators on retreat', 'Birthday takeovers'],
     image: '/media/camping.png'
@@ -57,9 +57,9 @@ export const experiences: Experience[] = [
     id: 'kayaking',
     name: 'Kayaking & Paddle Boarding',
     summary:
-      'Supported by Royal Madras Yacht Club mentors, the creek stays glassy for tandem paddles, SUP reels, and drone passes.',
+      'There are a handful of kayaks on site and calm backwaters, so small groups can paddle short loops and shoot from the waterline.',
     whyItLooksGood: 'Endless reflections plus low mangrove lines keep the horizon clean for cinematic shots.',
-    duration: '60–120 minute loops',
+    duration: 'Short loops from the jetty',
     bestTime: 'Sunrise calm or sunset warmth',
     idealFor: ['Adventurous pairs', 'Fitness collectives', 'Micro-influencers'],
     image: '/media/kayaking.png'
@@ -68,9 +68,9 @@ export const experiences: Experience[] = [
     id: 'angling',
     name: 'Angling & Creek Drifts',
     summary:
-      'Recognised by the Chennai angling community, Sans Souci sets you up with gear, guides, and chilled decks for slow filming.',
+      'Local anglers use this stretch of Ennore Creek—bring your own rods and spend slow time along the water, with decks nearby to sit and film.',
     whyItLooksGood: 'Long lenses capture silhouette movements while ripples carry highlights back to the camera.',
-    duration: 'Half-day charter slots',
+    duration: 'Unstructured sessions along the water',
     bestTime: 'Early morning tide rise',
     idealFor: ['Weekend naturists', 'Father–daughter duos', 'Docu crews'],
     image: '/media/angling.png'
@@ -79,9 +79,9 @@ export const experiences: Experience[] = [
     id: 'motor',
     name: 'Motor Boating Loops',
     summary:
-      'Loop the Ennore backwaters by motor launch to scout drone POVs, location-hunt, or shuttle between shoot stations.',
+      'Some crews choose to arrange local boat hires to loop the backwaters; Sans Souci works as a quiet start and finish point if you plan this yourself.',
     whyItLooksGood: 'Wake trails carve graphic lines into the creek—perfect for top-down drone pans.',
-    duration: '45-minute loops',
+    duration: 'Boat loops you arrange with local operators',
     bestTime: 'Late afternoon light',
     idealFor: ['Location scouts', 'Creators filming transitions'],
     image: '/media/events.png'
@@ -90,20 +90,20 @@ export const experiences: Experience[] = [
     id: 'events',
     name: 'Waterfront Events & Film Sets',
     summary:
-      'From intimate acoustic sets to 200-person wrap parties, the deck system is rig-ready with power, green rooms, and boat transfers.',
+      'Over the years the space has hosted shoots and small gatherings where crews brought their own sound, lighting, and decor—the creek and sky do most of the work.',
     whyItLooksGood: 'Layered lighting plans + creek reflections give you depth without heavy decor.',
-    duration: 'Custom itineraries',
+    duration: 'Day or evening blocks that you design',
     bestTime: 'Twilight through midnight',
     idealFor: ['Launches', 'After-movies', 'Creator festivals'],
     image: '/media/events.png'
   },
   {
     id: 'private',
-    name: 'Private Offsites & Residencies',
+    name: 'Private Offsites & Day Visits',
     summary:
-      'Close enough for day trips, isolated enough to feel off-grid. Bring teams for workshops, writing sprints, or wellness labs.',
+      'Close enough for a quick drive from the city, quiet enough to feel away from it. Bring your own agenda—work sprints, sketching, reading, or just doing nothing.',
     whyItLooksGood: 'Muted palettes, textured decks, and wide skies keep every slide photo-ready.',
-    duration: 'Day or weekend blocks',
+    duration: 'Day visits, with optional camping if you bring what you need',
     bestTime: 'Weekday calm',
     idealFor: ['Studios', 'Startups', 'Wellness hosts'],
     image: '/media/hero.png'
@@ -159,27 +159,27 @@ export const planTimeline = [
   {
     time: '15:30',
     title: 'Convoy leaves Chennai',
-    detail: 'Load cameras + paddle gear. Coffee + briefing on the ride.'
+    detail: 'Wrap work, load cameras and snacks, and start from the city together.'
   },
   {
     time: '16:15',
     title: 'Arrival + Setup',
-    detail: 'Check into decks, select kayaks, test drones, and scout light.'
+    detail: 'Reach Sans Souci, walk through the shade and decks, look at the light, and get kayaks ready if you plan to paddle.'
   },
   {
     time: '17:00',
     title: 'Adventure Layer',
-    detail: 'Kayak loops, SUP races, or angling sequences while tide is mellow.'
+    detail: 'Use the creek the way you planned—short kayak loops, walking the bank, or quietly fishing and filming.'
   },
   {
     time: '17:40',
     title: 'Golden Hour Sprint',
-    detail: 'Move to Sunset Jetty + Photo Trail, capture transitions + portraits.'
+    detail: 'Head to the jetty and photo spots for reels, portraits, and reflections.'
   },
   {
     time: '19:00',
     title: 'Dinner & Bonfire',
-    detail: 'Private chef menus, acoustic sessions, and bonfire reels.'
+    detail: 'Simple dinner you bring or order in, quiet conversations, and a small bonfire if the evening and guidelines allow.'
   }
 ];
 
@@ -209,16 +209,16 @@ export const membershipBenefits = [
 
 export const weeklyEvents = [
   {
-    title: 'Creator Residency Weekend',
-    detail: '48-hour access with bunk tents, editing hut, and shuttle boats.'
+    title: 'Weekend creator camp (idea)',
+    detail: 'Two days where a small crew brings their own tents, edits under the shed roof, and paddles when the light is right.'
   },
   {
-    title: 'Tide-Aware Kayak Rally',
-    detail: 'Guided paddle board cruise with GoPro mounts + rescue crew.'
+    title: 'Tide-aware kayak day (idea)',
+    detail: 'Friends coordinate arrival with a good tide, share kayaks, and trade filming turns from the jetty and waterline.'
   },
   {
-    title: 'Waterfront Micro Weddings',
-    detail: '50-guest ceremonies with jetty aisle + drone coverage plan.'
+    title: 'Small waterfront gathering (idea)',
+    detail: 'A modest celebration where guests bring their own decor, food, and music while the creek and sky stay centre-stage.'
   }
 ];
 

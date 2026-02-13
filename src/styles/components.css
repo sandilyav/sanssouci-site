@@ -227,6 +227,54 @@
   gap: var(--space-24);
 }
 
+.experience-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.experience-card img {
+  border-radius: 12px;
+  margin-bottom: var(--space-16);
+}
+
+.experience-card h3 {
+  margin: 0;
+}
+
+.experience-card__body p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.experience-card__meta {
+  margin-top: auto;
+  padding-top: var(--space-16);
+  border-top: 1px solid var(--color-border);
+}
+
+.experience-card__meta ul {
+  margin: 0;
+  padding: 0;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.experience-card__meta li + li {
+  margin-top: var(--space-8);
+}
+
+.experience-card__meta strong {
+  display: block;
+}
+
+.experience-card__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
 .experience-card img,
 .photo-spot-card img,
 .gallery-grid img {

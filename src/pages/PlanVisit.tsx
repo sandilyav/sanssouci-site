@@ -4,8 +4,8 @@ import { planTimeline, travelCopy } from '../data/content';
 const PlanVisitPage = () => (
   <Section
     eyebrow="Plan Your Visit"
-    title="Design your Sans Souci timeline"
-    subtitle="Mobile-first itinerary builder for crews who want to maximize golden hour."
+    title="Example timeline from city to creek"
+    subtitle="One way a crew could use an evening slot—purely as a guide while you plan your own visit."
   >
     <div className="grid grid-2">
       <div className="timeline">
