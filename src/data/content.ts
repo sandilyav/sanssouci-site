@@ -115,10 +115,10 @@ export const photoSpots: PhotoSpot[] = [
     id: 'sunset-jetty',
     name: 'Sunset Jetty',
     bestTime: 'Golden Hour (5:20–5:50 PM)',
-    tide: 'Rising tide for mirror water',
-    wind: '< 12 km/h',
-    angle: 'Low 35mm shot down the jetty for vanishing lines',
-    reelIdea: 'Outfit transitions as the sun crosses the bridge arc',
+    tide: 'Looks best on a gently rising tide',
+    wind: 'Calmer when wind is under ~12 km/h',
+    angle: 'Simple walk-down shot along the jetty towards the bridge',
+    reelIdea: 'Straightforward sunset photos and clips with the bridge and creek behind you',
     hashtag: '#ChennaiSunsets',
     image: '/media/spot-sunset.jpg'
   },
@@ -126,10 +126,10 @@ export const photoSpots: PhotoSpot[] = [
     id: 'kayak-reflection',
     name: 'Kayak Reflection Zone',
     bestTime: 'Blue hour + sunrise',
-    tide: 'Slack tide',
-    wind: '< 8 km/h',
-    angle: 'Drone top-down or handheld at water surface',
-    reelIdea: '60s POV paddle with audio-reactive captions',
+    tide: 'Slack or steady tide so the surface stays glassy',
+    wind: 'Works best when wind is light',
+    angle: 'Camera low to the water or from the bank looking across the creek',
+    reelIdea: 'Short paddle loops showing the kayak, trees, and reflections in one frame',
     hashtag: '#SansSouciCreek',
     image: '/media/spot-kayak.jpg'
   },
@@ -138,9 +138,9 @@ export const photoSpots: PhotoSpot[] = [
     name: 'Bonfire Cove',
     bestTime: 'Nightfall',
     tide: 'Any',
-    wind: '< 15 km/h',
-    angle: 'Wide lens capturing silhouettes + sparks',
-    reelIdea: 'Voice-note storytelling shot in warm light',
+    wind: 'More comfortable when wind is under ~15 km/h',
+    angle: 'Wide frame that keeps the trees, fire, and people in shot',
+    reelIdea: 'Simple bonfire photos and clips with warm light and silhouettes',
     hashtag: '#CreeksideNights',
     image: '/media/spot-bonfire.jpg'
   }
@@ -195,8 +195,8 @@ export const galleryImages = [
 ];
 
 export const contactInfo = {
-  phones: ['+91 98403 66025', '+91 63601 94788'],
-  email: 'bookings@sanssouci.in',
+  phones: ['+91 733-8770765'],
+  email: '',
   address: '399, Kathivakkam High Road, Ennore, Tamil Nadu 600057'
 };
 

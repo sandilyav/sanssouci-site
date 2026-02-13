@@ -63,9 +63,9 @@ const HomePage = () => {
       </Section>
 
       <Section
-        eyebrow="Most Instagrammable"
-        title="The Sans Souci Photo Trail"
-        subtitle="Timed stops for creators chasing reflections, silhouettes, and bonfire glow."
+        eyebrow="Photo Spots"
+        title="Simple corners that photograph well"
+        subtitle="A few places regulars like to shoot from, with suggested times and angles you can adapt to your own plans."
         id="photo-trail"
       >
         <div className="experience-grid">
@@ -221,9 +221,6 @@ const HomePage = () => {
                 <a href={`tel:${phone.replace(/\s|\-/g, '')}`}>{phone}</a>
               </p>
             ))}
-            <p>
-              <a href="mailto:bookings@sanssouci.in">bookings@sanssouci.in</a>
-            </p>
             <p>{contactInfo.address}</p>
           </div>
         </div>

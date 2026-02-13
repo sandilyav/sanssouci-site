@@ -120,7 +120,6 @@ const SiteShell = () => {
                   {phone}
                 </a>
               ))}
-              <a href="mailto:bookings@sanssouci.in">bookings@sanssouci.in</a>
               <p>{contactInfo.address}</p>
             </div>
           </div>

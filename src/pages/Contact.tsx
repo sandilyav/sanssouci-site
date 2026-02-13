@@ -28,15 +28,12 @@ const ContactPage = () => (
         <button className="button button-primary">Send</button>
       </form>
       <div className="card">
-        <h3>Call or email</h3>
+        <h3>Call us</h3>
         {contactInfo.phones.map((phone) => (
           <p key={phone}>
             <a href={`tel:${phone.replace(/\s|\-/g, '')}`}>{phone}</a>
           </p>
         ))}
-        <p>
-          <a href="mailto:bookings@sanssouci.in">bookings@sanssouci.in</a>
-        </p>
         <p>{contactInfo.address}</p>
       </div>
     </div>
