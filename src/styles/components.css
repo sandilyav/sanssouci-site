@@ -36,6 +36,10 @@
   flex-wrap: wrap;
 }
 
+.nav-links.nav-links--closed {
+  display: none;
+}
+
 .nav-cta {
   display: none;
   gap: var(--space-16);
@@ -261,6 +265,18 @@
   margin-right: 6px;
 }
 
+.bttv-dot--activity-kayaking {
+  background: var(--color-activity-kayak);
+}
+
+.bttv-dot--activity-photography {
+  background: var(--color-activity-photography);
+}
+
+.bttv-dot--activity-leisure {
+  background: var(--color-activity-leisure);
+}
+
 .bttv-dot--perfect {
   background: var(--color-bttv-perfect);
 }
@@ -277,6 +293,15 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-16);
+}
+
+.bttv-grid-track {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  align-items: flex-start;
+  width: fit-content;
+  max-width: 100%;
 }
 
 .bttv-day-switcher {
@@ -334,7 +359,8 @@
 }
 
 .bttv-grid-table {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   border-collapse: separate;
   border-spacing: 18px 14px;
   table-layout: fixed;
@@ -394,7 +420,24 @@
   display: inline-flex;
 }
 
+.bttv-grid-scroll {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bttv-grid-scroll input[type='range'] {
+  width: calc(100% - 4px);
+}
+
+.bttv-grid-scroll span {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
 .bttv-circle {
+  --bttv-activity-color: var(--color-bttv-perfect);
   position: relative;
   width: 32px;
   height: 32px;
@@ -410,18 +453,30 @@
 }
 
 .bttv-circle--perfect {
-  background: var(--color-bttv-perfect);
+  background: var(--bttv-activity-color);
   border-color: transparent;
 }
 
 .bttv-circle--good {
-  background: rgba(95, 174, 168, 0.15);
-  border-color: rgba(95, 174, 168, 0.8);
+  background: color-mix(in srgb, var(--bttv-activity-color) 16%, var(--color-surface));
+  border-color: var(--bttv-activity-color);
 }
 
 .bttv-circle--neutral {
   background: transparent;
   color: var(--color-text-secondary);
+}
+
+.bttv-circle--activity-kayaking {
+  --bttv-activity-color: var(--color-activity-kayak);
+}
+
+.bttv-circle--activity-photography {
+  --bttv-activity-color: var(--color-activity-photography);
+}
+
+.bttv-circle--activity-leisure {
+  --bttv-activity-color: var(--color-activity-leisure);
 }
 
 .bttv-circle--empty {
@@ -505,12 +560,14 @@
 .bttv-detail h4 {
   margin: 0;
   font-size: 1.2rem;
+  line-height: 1.7;
 }
 
 .bttv-detail__time,
 .bttv-detail__summary {
   margin: 0;
   color: var(--color-text-secondary);
+  line-height: 1.9;
 }
 
 .bttv-detail__chips {
@@ -520,6 +577,7 @@
 }
 
 .bttv-chip {
+  --bttv-chip-color: var(--color-bttv-border);
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -527,6 +585,23 @@
   border-radius: var(--radius-full);
   border: 1px solid var(--color-bttv-border);
   font-size: 0.85rem;
+}
+
+.bttv-chip--primary,
+.bttv-chip--secondary {
+  border-color: var(--bttv-chip-color);
+}
+
+.bttv-chip--activity-kayaking {
+  --bttv-chip-color: var(--color-activity-kayak);
+}
+
+.bttv-chip--activity-photography {
+  --bttv-chip-color: var(--color-activity-photography);
+}
+
+.bttv-chip--activity-leisure {
+  --bttv-chip-color: var(--color-activity-leisure);
 }
 
 .bttv-detail__metrics {
@@ -631,16 +706,24 @@
 }
 
 @media (max-width: 767px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links--open {
+    display: flex;
+  }
+
+  .nav-links.nav-links--open .nav-link {
+    color: var(--color-surface);
+  }
+
   .bttv-panel__legend {
     justify-content: space-between;
   }
 
   .bttv-detail {
-    display: none;
-  }
-
-  .bttv-detail__mobile {
-    display: inline-flex;
+    display: flex;
   }
 }
 

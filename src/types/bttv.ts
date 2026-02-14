@@ -1,4 +1,4 @@
-export type ActivityKey = 'kayaking' | 'dune' | 'photography' | 'leisure';
+export type ActivityKey = 'kayaking' | 'photography' | 'leisure';
 
 export type RatingLabel = 'perfect' | 'good' | 'not_ideal';
 
@@ -30,7 +30,7 @@ export interface WindowRecommendation {
   end: string;
   label: string;
   rating: RatingLabel;
-  overallScore: number;
+  primaryScore: number;
   summary: string;
   activities: ActivityScore[];
   metrics: WindowMetrics;

@@ -1,6 +1,6 @@
 import { ACTIVITY_LABELS } from './config';
 import type { ActivityKey, ActivityScore, WindowRecommendation } from './types';
-import { clamp, ratingFromScore } from './utils';
+import { clamp } from './utils';
 
 export type TideState = 'high' | 'low' | 'rising' | 'falling';
 
@@ -26,7 +26,7 @@ export interface WindowMetricsInput {
   };
 }
 
-const activityOrder: ActivityKey[] = ['kayaking', 'photography', 'dune', 'leisure'];
+const activityOrder: ActivityKey[] = ['kayaking', 'photography', 'leisure'];
 
 const scoreBuckets = (value: number | null, ranges: Array<{ max?: number; min?: number; score: number }>, fallback = 0) => {
   if (value === null) return fallback;
@@ -76,51 +76,6 @@ const kayakingScore = (metrics: WindowMetricsInput['metrics']): number => {
 
   if (metrics.sunset) {
     total += 5;
-  }
-
-  return clamp(total);
-};
-
-const duneScore = (metrics: WindowMetricsInput['metrics']): number => {
-  const wind = scoreBuckets(metrics.windSpeed, [
-    { max: 12, score: 30 },
-    { min: 12, max: 20, score: 20 },
-    { min: 20, max: 25, score: 10 },
-    { min: 25, score: 0 }
-  ], 15);
-
-  let tide = 15;
-  switch (metrics.tideState) {
-    case 'low':
-      tide = 30;
-      break;
-    case 'falling':
-      tide = 20;
-      break;
-    case 'high':
-      tide = 10;
-      break;
-    default:
-      tide = 15;
-  }
-
-  const temperature = scoreBuckets(metrics.temperature, [
-    { min: 22, max: 30, score: 20 },
-    { min: 18, max: 22, score: 12 },
-    { min: 30, max: 34, score: 12 }
-  ], 8);
-
-  const cloud = scoreBuckets(metrics.cloudCover, [
-    { min: 20, max: 50, score: 20 },
-    { max: 20, score: 15 },
-    { min: 50, max: 70, score: 12 },
-    { min: 70, score: 8 }
-  ], 12);
-
-  let total = wind + tide + temperature + cloud;
-
-  if (metrics.precipitation !== null && metrics.precipitation > 0) {
-    total *= 0.7;
   }
 
   return clamp(total);
@@ -186,7 +141,6 @@ export const computeActivityScores = (input: WindowMetricsInput): ActivityScore[
 
   const scores: Record<ActivityKey, number> = {
     kayaking: kayakingScore(metrics),
-    dune: duneScore(metrics),
     photography: photographyScore(metrics, input.goldenWindow),
     leisure: leisureScore(metrics)
   };
@@ -207,19 +161,6 @@ export const computeActivityScores = (input: WindowMetricsInput): ActivityScore[
   activities.sort((a, b) => b.score - a.score);
   return activities;
 };
-
-export const overallWindowScore = (activities: ActivityScore[]) => {
-  if (!activities.length) return 0;
-  const primary = activities[0].score;
-  const others = activities.slice(1);
-  const averageOthers = others.length
-    ? others.reduce((total, item) => total + item.score, 0) / others.length
-    : 0;
-  const composite = primary * 0.7 + averageOthers * 0.3;
-  return clamp(composite);
-};
-
-export const ratingFromWindow = (activities: ActivityScore[]) => ratingFromScore(overallWindowScore(activities));
 
 export const applyMoonPhaseBonus = (score: number, metrics: WindowMetricsInput['metrics']) => {
   if (

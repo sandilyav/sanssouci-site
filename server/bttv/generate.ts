@@ -7,19 +7,11 @@ import { DateTime } from 'luxon';
 import { SANS_SOUCI_LAT, SANS_SOUCI_LNG, SANS_SOUCI_TIMEZONE } from '../../src/config/location';
 import { DAYS_TO_FETCH, REFRESH_HOURS, WINDOW_BLOCKS } from './config';
 import type { BestTimesPayload, DayRecommendations, TideEntry, WindowRecommendation } from './types';
-import { fetchAstronomy, fetchTide, fetchWeather } from './stormglass';
-import {
-  applyMoonPhaseBonus,
-  buildSummary,
-  computeActivityScores,
-  overallWindowScore,
-  type TideState
-} from './scoring';
-import { average, formatActivitiesList, pickValue, ratingFromScore, round } from './utils';
+import { applyMoonPhaseBonus, buildSummary, computeActivityScores, type TideState } from './scoring';
+import { formatActivitiesList, ratingFromScore } from './utils';
 
 const OUTPUT_PATH = path.resolve(process.cwd(), 'public/data/best-times.json');
 
-const toLocal = (iso: string) => DateTime.fromISO(iso, { zone: 'utc' }).setZone(SANS_SOUCI_TIMEZONE);
 const toIsoString = (date: DateTime) =>
   date.toISO() ?? date.setZone('utc').toISO() ?? `${date.toISODate() ?? 'unknown'}T00:00:00`;
 
@@ -41,7 +33,7 @@ const computeWindowLabel = (dayLabel: string, blockLabel: string) => `${dayLabel
 const summarisePayload = (days: DayRecommendations[]): string => {
   const allWindows = days.flatMap((day) => day.windows);
   if (!allWindows.length) return 'Conditions moderate this week. Morning visits recommended.';
-  const best = [...allWindows].sort((a, b) => b.overallScore - a.overallScore)[0];
+  const best = [...allWindows].sort((a, b) => b.primaryScore - a.primaryScore)[0];
   const activities = formatActivitiesList(best.activities);
   if (!activities) {
     return `${best.label}: Better for unhurried creek time.`;
@@ -53,78 +45,47 @@ const run = async () => {
   const now = DateTime.now().setZone(SANS_SOUCI_TIMEZONE).startOf('hour');
   const endWindow = now.plus({ days: DAYS_TO_FETCH }).endOf('day');
 
-  const [weather, astronomy, tide] = await Promise.all([
-    fetchWeather(SANS_SOUCI_LAT, SANS_SOUCI_LNG, now, endWindow),
-    fetchAstronomy(SANS_SOUCI_LAT, SANS_SOUCI_LNG, now, endWindow),
-    fetchTide(SANS_SOUCI_LAT, SANS_SOUCI_LNG, now, endWindow)
-  ]);
-
-  const weatherHours = weather.map((hour) => ({ ...hour, localTime: toLocal(hour.time) }));
-  const astronomyByDate = new Map(
-    astronomy.map((entry) => {
-      const date = toLocal(entry.time).toISODate();
-      return [
-        date,
-        {
-          sunrise: entry.sunrise ? toLocal(entry.sunrise) : null,
-          sunset: entry.sunset ? toLocal(entry.sunset) : null,
-          moonPhase: typeof entry.moonPhase === 'number' ? entry.moonPhase * 100 : null
-        }
-      ];
-    })
-  );
-  const tideEntries = tide.map((entry) => ({ ...entry, localTime: toLocal(entry.time) }));
+  console.log('Generating BTTV data from synthetic weather/tide inputs for layout testing.');
 
   const days: DayRecommendations[] = [];
 
   for (let index = 0; index < DAYS_TO_FETCH; index += 1) {
     const dayStart = now.startOf('day').plus({ days: index });
     const dayLabel = dayStart.toFormat('ccc, d MMM');
-    const astronomyData = astronomyByDate.get(dayStart.toISODate());
+    const sunriseTime = dayStart.set({ hour: 6, minute: 5 + (index % 4) * 4 });
+    const sunsetTime = dayStart.set({ hour: 18, minute: 5 - (index % 3) * 3 });
+    const moonPhase = (index * 9) % 100;
 
     const day: DayRecommendations = {
       id: dayStart.toISODate() ?? `day-${index}`,
       date: toIsoString(dayStart),
       label: dayLabel,
       isToday: index === 0,
-      isFullMoon: (astronomyData?.moonPhase ?? 0) >= 95,
+      isFullMoon: moonPhase >= 95,
       windows: []
     };
 
-    for (const block of WINDOW_BLOCKS) {
+    for (let blockIndex = 0; blockIndex < WINDOW_BLOCKS.length; blockIndex += 1) {
+      const block = WINDOW_BLOCKS[blockIndex];
       const windowStart = dayStart.set({ hour: block.startHour });
       const windowEnd = dayStart.set({ hour: block.endHour });
       if (windowEnd < now || windowStart > endWindow) {
         continue;
       }
 
-      const windowWeather = weatherHours.filter(
-        (hour) => hour.localTime >= windowStart && hour.localTime < windowEnd
-      );
+      const windSpeed = Math.max(4, Math.min(28, 8 + blockIndex * 2 + ((index % 5) - 2) * 1.5));
+      const windGust = windSpeed + 3 + (blockIndex % 2);
+      const windDirection = (65 + index * 18 + blockIndex * 22) % 360;
+      const temperature = 24 + blockIndex * 1.8 + ((index + 1) % 4) * 0.6;
+      const precipitation = blockIndex === 3 && index % 3 === 0 ? 1.2 : blockIndex === 4 && index % 4 === 0 ? 0.6 : 0;
+      const cloudCover = Math.max(8, Math.min(85, 18 + blockIndex * 11 + (index % 6) * 4));
 
-      const windSpeed = round(average(windowWeather.map((hour) => pickValue(hour.windSpeed))), 1);
-      const windGust = round(average(windowWeather.map((hour) => pickValue(hour.windGust))), 1);
-      const windDirection = round(
-        average(windowWeather.map((hour) => pickValue(hour.windDirection))),
-        0
-      );
-      const temperature = round(average(windowWeather.map((hour) => pickValue(hour.airTemperature))), 1);
-      const precipitation = round(
-        average(windowWeather.map((hour) => pickValue(hour.precipitation))),
-        1
-      );
-      const cloudCover = round(average(windowWeather.map((hour) => pickValue(hour.cloudCover))), 0);
-
-      const windowTide = tideEntries.filter(
-        (entry) => entry.localTime >= windowStart && entry.localTime < windowEnd
-      );
-      const tideHeight = windowTide.length
-        ? round(Math.max(...windowTide.map((entry) => entry.height)), 2)
-        : null;
-      const tideState = determineTideState(windowTide);
-
-      const sunriseTime = astronomyData?.sunrise ?? null;
-      const sunsetTime = astronomyData?.sunset ?? null;
+      const tideSamples: TideEntry[] = [
+        { time: toIsoString(windowStart), height: 0.85 + ((index + blockIndex) % 5) * 0.2 },
+        { time: toIsoString(windowStart.plus({ hour: 1 })), height: 0.95 + ((index + blockIndex + 2) % 5) * 0.2 }
+      ];
+      const tideHeight = Math.max(...tideSamples.map((entry) => entry.height));
+      const tideState = determineTideState(tideSamples);
 
       const sunriseInside = Boolean(
         sunriseTime && sunriseTime >= windowStart && sunriseTime < windowEnd
@@ -149,7 +110,7 @@ const run = async () => {
         tideState,
         sunrise: sunriseInside,
         sunset: sunsetInside,
-        moonPhase: astronomyData?.moonPhase ?? null,
+        moonPhase,
         daylight
       };
 
@@ -161,10 +122,10 @@ const run = async () => {
         daylight,
         metrics
       });
-
-      let overallScore = overallWindowScore(activities);
-      overallScore = applyMoonPhaseBonus(overallScore, metrics);
-      const rating = ratingFromScore(overallScore);
+      const [primary, ...otherActivities] = activities;
+      const boostedPrimaryScore = applyMoonPhaseBonus(primary.score, metrics);
+      const rating = ratingFromScore(boostedPrimaryScore);
+      const adjustedActivities = [{ ...primary, score: boostedPrimaryScore }, ...otherActivities];
 
       const windowRecommendation: WindowRecommendation = {
         id: `${day.id}-${block.id}`,
@@ -174,9 +135,9 @@ const run = async () => {
         end: toIsoString(windowEnd),
         label: computeWindowLabel(day.label, block.label),
         rating,
-        overallScore: Math.round(overallScore),
+        primaryScore: Math.round(boostedPrimaryScore),
         summary: '',
-        activities,
+        activities: adjustedActivities,
         metrics: {
           windSpeed: metrics.windSpeed ?? 0,
           windGust: metrics.windGust ?? 0,
@@ -208,8 +169,8 @@ const run = async () => {
   };
 
   await mkdir(path.dirname(OUTPUT_PATH), { recursive: true });
-  await writeFile(OUTPUT_PATH, JSON.stringify(payload, null, 2));
-  console.log(`Best times data written to ${OUTPUT_PATH}`);
+  await writeFile(OUTPUT_PATH, JSON.stringify(payload, null, 2), 'utf8');
+  console.log(`Best times generated at ${OUTPUT_PATH}`);
 };
 
 run().catch((error) => {

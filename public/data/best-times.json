@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-14T08:00:00.000+05:30",
+  "generatedAt": "2026-02-14T12:00:00.000+05:30",
   "timezone": "Asia/Kolkata",
   "refreshHours": 6,
   "days": [
@@ -11,98 +11,6 @@
       "isFullMoon": false,
       "windows": [
         {
-          "id": "2026-02-14-daybreak",
-          "dayIndex": 0,
-          "blockId": "daybreak",
-          "start": "2026-02-14T06:00:00.000+05:30",
-          "end": "2026-02-14T08:00:00.000+05:30",
-          "label": "Sat, 14 Feb • 6–8 AM",
-          "rating": "perfect",
-          "overallScore": 84,
-          "summary": "Sat, 14 Feb • 6–8 AM: Dune Driving ready — low tide, calm wind.",
-          "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 92
-            },
-            {
-              "key": "photography",
-              "label": "Sunset Photography",
-              "score": 75
-            },
-            {
-              "key": "leisure",
-              "label": "Creek Leisure",
-              "score": 70
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 53
-            }
-          ],
-          "metrics": {
-            "windSpeed": 3.9,
-            "windGust": 0,
-            "windDirection": 45,
-            "temperature": 25.2,
-            "cloudCover": 56,
-            "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
-            "sunrise": true,
-            "sunset": false,
-            "moonPhase": 0
-          }
-        },
-        {
-          "id": "2026-02-14-morning",
-          "dayIndex": 0,
-          "blockId": "morning",
-          "start": "2026-02-14T08:00:00.000+05:30",
-          "end": "2026-02-14T10:00:00.000+05:30",
-          "label": "Sat, 14 Feb • 8–10 AM",
-          "rating": "perfect",
-          "overallScore": 88,
-          "summary": "Sat, 14 Feb • 8–10 AM: Dune Driving ready — low tide, calm wind.",
-          "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 100
-            },
-            {
-              "key": "leisure",
-              "label": "Creek Leisure",
-              "score": 70
-            },
-            {
-              "key": "photography",
-              "label": "Sunset Photography",
-              "score": 55
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 53
-            }
-          ],
-          "metrics": {
-            "windSpeed": 4.3,
-            "windGust": 0,
-            "windDirection": 39,
-            "temperature": 25.3,
-            "cloudCover": 38,
-            "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
-            "sunrise": false,
-            "sunset": false,
-            "moonPhase": 0
-          }
-        },
-        {
           "id": "2026-02-14-late-morning",
           "dayIndex": 0,
           "blockId": "late-morning",
@@ -110,39 +18,34 @@
           "end": "2026-02-14T12:00:00.000+05:30",
           "label": "Sat, 14 Feb • 10 AM–12 PM",
           "rating": "perfect",
-          "overallScore": 88,
-          "summary": "Sat, 14 Feb • 10 AM–12 PM: Dune Driving ready — low tide, calm wind.",
+          "primaryScore": 85,
+          "summary": "Sat, 14 Feb • 10 AM–12 PM: Kayaking ready — high tide, calm wind.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 100
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 85
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
+              "score": 80
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
               "score": 55
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 53
             }
           ],
           "metrics": {
-            "windSpeed": 4.3,
-            "windGust": 0,
-            "windDirection": 38,
-            "temperature": 25.5,
-            "cloudCover": 49,
+            "windSpeed": 9,
+            "windGust": 12,
+            "windDirection": 109,
+            "temperature": 28.200000000000003,
+            "cloudCover": 40,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.75,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
             "moonPhase": 0
@@ -155,40 +58,35 @@
           "start": "2026-02-14T16:00:00.000+05:30",
           "end": "2026-02-14T18:00:00.000+05:30",
           "label": "Sat, 14 Feb • 4–6 PM",
-          "rating": "good",
-          "overallScore": 79,
-          "summary": "Sat, 14 Feb • 4–6 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "not_ideal",
+          "primaryScore": 42,
+          "summary": "Sat, 14 Feb • 4–6 PM: Calmer conditions, better for easy creek time.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 88
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 42.400000000000006
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 53
+              "score": 34.8
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 50
+              "score": 30
             }
           ],
           "metrics": {
-            "windSpeed": 5.1,
-            "windGust": 0,
-            "windDirection": 53,
-            "temperature": 25.7,
-            "cloudCover": 93,
-            "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "windSpeed": 11,
+            "windGust": 15,
+            "windDirection": 131,
+            "temperature": 30,
+            "cloudCover": 51,
+            "precipitation": 1.2,
+            "tideHeight": 1.4500000000000002,
+            "tideState": "falling",
             "sunrise": false,
             "sunset": false,
             "moonPhase": 0
@@ -201,40 +99,35 @@
           "start": "2026-02-14T18:00:00.000+05:30",
           "end": "2026-02-14T20:00:00.000+05:30",
           "label": "Sat, 14 Feb • 6–8 PM",
-          "rating": "perfect",
-          "overallScore": 81,
-          "summary": "Sat, 14 Feb • 6–8 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 63,
+          "summary": "Sat, 14 Feb • 6–8 PM: Calmer conditions, better for easy creek time.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 88
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 62.6
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
+              "score": 38.8
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 65
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 58
+              "score": 32.5
             }
           ],
           "metrics": {
-            "windSpeed": 5,
-            "windGust": 0,
-            "windDirection": 64,
-            "temperature": 25.7,
-            "cloudCover": 95,
-            "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "windSpeed": 13,
+            "windGust": 16,
+            "windDirection": 153,
+            "temperature": 31.8,
+            "cloudCover": 62,
+            "precipitation": 0.6,
+            "tideHeight": 1.65,
+            "tideState": "high",
             "sunrise": false,
             "sunset": true,
             "moonPhase": 0
@@ -257,42 +150,37 @@
           "end": "2026-02-15T08:00:00.000+05:30",
           "label": "Sun, 15 Feb • 6–8 AM",
           "rating": "perfect",
-          "overallScore": 87,
-          "summary": "Sun, 15 Feb • 6–8 AM: Dune Driving ready — low tide, calm wind.",
+          "primaryScore": 90,
+          "summary": "Sun, 15 Feb • 6–8 AM: Sunset Photography ready — high tide, calm wind.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 95
-            },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 80
-            },
-            {
-              "key": "leisure",
-              "label": "Creek Leisure",
-              "score": 70
+              "score": 90
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 53
+              "score": 85
+            },
+            {
+              "key": "leisure",
+              "label": "Creek Leisure",
+              "score": 80
             }
           ],
           "metrics": {
-            "windSpeed": 1.1,
-            "windGust": 0,
-            "windDirection": 71,
-            "temperature": 24.9,
-            "cloudCover": 9,
+            "windSpeed": 6.5,
+            "windGust": 9.5,
+            "windDirection": 83,
+            "temperature": 25.2,
+            "cloudCover": 22,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.55,
+            "tideState": "high",
             "sunrise": true,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 9
           }
         },
         {
@@ -303,42 +191,37 @@
           "end": "2026-02-15T10:00:00.000+05:30",
           "label": "Sun, 15 Feb • 8–10 AM",
           "rating": "perfect",
-          "overallScore": 83,
-          "summary": "Sun, 15 Feb • 8–10 AM: Dune Driving ready — low tide, calm wind.",
+          "primaryScore": 85,
+          "summary": "Sun, 15 Feb • 8–10 AM: Kayaking ready — high tide, calm wind.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 95
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 85
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 53
+              "score": 80
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 45
+              "score": 55
             }
           ],
           "metrics": {
-            "windSpeed": 1.6,
-            "windGust": 0,
-            "windDirection": 31,
-            "temperature": 25,
-            "cloudCover": 5,
+            "windSpeed": 8.5,
+            "windGust": 12.5,
+            "windDirection": 105,
+            "temperature": 27,
+            "cloudCover": 33,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.75,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 9
           }
         },
         {
@@ -348,43 +231,38 @@
           "start": "2026-02-15T10:00:00.000+05:30",
           "end": "2026-02-15T12:00:00.000+05:30",
           "label": "Sun, 15 Feb • 10 AM–12 PM",
-          "rating": "perfect",
-          "overallScore": 83,
-          "summary": "Sun, 15 Feb • 10 AM–12 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 66,
+          "summary": "Sun, 15 Feb • 10 AM–12 PM: Calmer conditions, better for easy creek time.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 95
-            },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
+              "score": 66
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 53
+              "score": 56
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 45
+              "score": 55
             }
           ],
           "metrics": {
-            "windSpeed": 2.3,
-            "windGust": 0,
-            "windDirection": 42,
-            "temperature": 25.3,
-            "cloudCover": 5,
+            "windSpeed": 10.5,
+            "windGust": 13.5,
+            "windDirection": 127,
+            "temperature": 28.8,
+            "cloudCover": 44,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.4500000000000002,
+            "tideState": "falling",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 9
           }
         },
         {
@@ -394,43 +272,38 @@
           "start": "2026-02-15T16:00:00.000+05:30",
           "end": "2026-02-15T18:00:00.000+05:30",
           "label": "Sun, 15 Feb • 4–6 PM",
-          "rating": "perfect",
-          "overallScore": 90,
-          "summary": "Sun, 15 Feb • 4–6 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 72,
+          "summary": "Sun, 15 Feb • 4–6 PM: Calmer conditions, better for easy creek time.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 100
-            },
-            {
-              "key": "photography",
-              "label": "Sunset Photography",
-              "score": 75
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 72
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
+              "score": 58
             },
             {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 53
+              "key": "photography",
+              "label": "Sunset Photography",
+              "score": 50
             }
           ],
           "metrics": {
-            "windSpeed": 4.2,
-            "windGust": 0,
-            "windDirection": 56,
-            "temperature": 25.8,
-            "cloudCover": 20,
+            "windSpeed": 12.5,
+            "windGust": 16.5,
+            "windDirection": 149,
+            "temperature": 30.599999999999998,
+            "cloudCover": 55,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.65,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 9
           }
         },
         {
@@ -440,43 +313,38 @@
           "start": "2026-02-15T18:00:00.000+05:30",
           "end": "2026-02-15T20:00:00.000+05:30",
           "label": "Sun, 15 Feb • 6–8 PM",
-          "rating": "perfect",
-          "overallScore": 87,
-          "summary": "Sun, 15 Feb • 6–8 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 65,
+          "summary": "Sun, 15 Feb • 6–8 PM: Calmer conditions, better for easy creek time.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 95
-            },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 80
-            },
-            {
-              "key": "leisure",
-              "label": "Creek Leisure",
-              "score": 70
+              "score": 65
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
               "score": 58
+            },
+            {
+              "key": "leisure",
+              "label": "Creek Leisure",
+              "score": 54
             }
           ],
           "metrics": {
-            "windSpeed": 4.3,
-            "windGust": 0,
-            "windDirection": 61,
-            "temperature": 25.8,
-            "cloudCover": 10,
+            "windSpeed": 14.5,
+            "windGust": 17.5,
+            "windDirection": 171,
+            "temperature": 32.4,
+            "cloudCover": 66,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.35,
+            "tideState": "rising",
             "sunrise": false,
             "sunset": true,
-            "moonPhase": 0
+            "moonPhase": 9
           }
         }
       ]
@@ -496,42 +364,37 @@
           "end": "2026-02-16T08:00:00.000+05:30",
           "label": "Mon, 16 Feb • 6–8 AM",
           "rating": "perfect",
-          "overallScore": 91,
-          "summary": "Mon, 16 Feb • 6–8 AM: Dune Driving ready — low tide, calm wind.",
+          "primaryScore": 90,
+          "summary": "Mon, 16 Feb • 6–8 AM: Sunset Photography ready — high tide, calm wind.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 100
-            },
             {
               "key": "photography",
               "label": "Sunset Photography",
               "score": 90
             },
             {
-              "key": "leisure",
-              "label": "Creek Leisure",
-              "score": 70
-            },
-            {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 53
+              "score": 85
+            },
+            {
+              "key": "leisure",
+              "label": "Creek Leisure",
+              "score": 80
             }
           ],
           "metrics": {
-            "windSpeed": 2.1,
-            "windGust": 0,
-            "windDirection": 103,
-            "temperature": 25.4,
-            "cloudCover": 31,
+            "windSpeed": 8,
+            "windGust": 11,
+            "windDirection": 101,
+            "temperature": 25.8,
+            "cloudCover": 26,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.75,
+            "tideState": "high",
             "sunrise": true,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 18
           }
         },
         {
@@ -541,43 +404,38 @@
           "start": "2026-02-16T08:00:00.000+05:30",
           "end": "2026-02-16T10:00:00.000+05:30",
           "label": "Mon, 16 Feb • 8–10 AM",
-          "rating": "perfect",
-          "overallScore": 83,
-          "summary": "Mon, 16 Feb • 8–10 AM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 66,
+          "summary": "Mon, 16 Feb • 8–10 AM: Calmer conditions, better for easy creek time.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 95
-            },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
+              "score": 66
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 53
+              "score": 56
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 45
+              "score": 55
             }
           ],
           "metrics": {
-            "windSpeed": 2,
-            "windGust": 0,
-            "windDirection": 94,
-            "temperature": 25.5,
-            "cloudCover": 12,
+            "windSpeed": 10,
+            "windGust": 14,
+            "windDirection": 123,
+            "temperature": 27.6,
+            "cloudCover": 37,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.4500000000000002,
+            "tideState": "falling",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 18
           }
         },
         {
@@ -587,24 +445,19 @@
           "start": "2026-02-16T10:00:00.000+05:30",
           "end": "2026-02-16T12:00:00.000+05:30",
           "label": "Mon, 16 Feb • 10 AM–12 PM",
-          "rating": "perfect",
-          "overallScore": 83,
-          "summary": "Mon, 16 Feb • 10 AM–12 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 75,
+          "summary": "Mon, 16 Feb • 10 AM–12 PM: Kayaking ready — high tide, calm wind.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 95
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 75
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
               "score": 70
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 53
             },
             {
               "key": "photography",
@@ -613,17 +466,17 @@
             }
           ],
           "metrics": {
-            "windSpeed": 2.3,
-            "windGust": 0,
-            "windDirection": 80,
-            "temperature": 25.8,
-            "cloudCover": 5,
+            "windSpeed": 12,
+            "windGust": 15,
+            "windDirection": 145,
+            "temperature": 29.400000000000002,
+            "cloudCover": 48,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.65,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 18
           }
         },
         {
@@ -633,43 +486,38 @@
           "start": "2026-02-16T16:00:00.000+05:30",
           "end": "2026-02-16T18:00:00.000+05:30",
           "label": "Mon, 16 Feb • 4–6 PM",
-          "rating": "perfect",
-          "overallScore": 90,
-          "summary": "Mon, 16 Feb • 4–6 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 65,
+          "summary": "Mon, 16 Feb • 4–6 PM: Calmer conditions, better for easy creek time.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 100
-            },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 75
-            },
-            {
-              "key": "leisure",
-              "label": "Creek Leisure",
-              "score": 70
+              "score": 65
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 53
+              "score": 62
+            },
+            {
+              "key": "leisure",
+              "label": "Creek Leisure",
+              "score": 54
             }
           ],
           "metrics": {
-            "windSpeed": 4.2,
-            "windGust": 0,
-            "windDirection": 70,
-            "temperature": 26.1,
-            "cloudCover": 48,
+            "windSpeed": 14,
+            "windGust": 18,
+            "windDirection": 167,
+            "temperature": 31.2,
+            "cloudCover": 59,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.35,
+            "tideState": "rising",
             "sunrise": false,
-            "sunset": false,
-            "moonPhase": 0
+            "sunset": true,
+            "moonPhase": 18
           }
         },
         {
@@ -679,43 +527,38 @@
           "start": "2026-02-16T18:00:00.000+05:30",
           "end": "2026-02-16T20:00:00.000+05:30",
           "label": "Mon, 16 Feb • 6–8 PM",
-          "rating": "perfect",
-          "overallScore": 92,
-          "summary": "Mon, 16 Feb • 6–8 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 58,
+          "summary": "Mon, 16 Feb • 6–8 PM: Calmer conditions, better for easy creek time.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 100
+              "key": "leisure",
+              "label": "Creek Leisure",
+              "score": 58
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 90
-            },
-            {
-              "key": "leisure",
-              "label": "Creek Leisure",
-              "score": 70
+              "score": 40
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 58
+              "score": 26.5
             }
           ],
           "metrics": {
-            "windSpeed": 4.5,
-            "windGust": 0,
-            "windDirection": 76,
-            "temperature": 26.1,
-            "cloudCover": 46,
+            "windSpeed": 16,
+            "windGust": 19,
+            "windDirection": 189,
+            "temperature": 33,
+            "cloudCover": 70,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.55,
+            "tideState": "high",
             "sunrise": false,
-            "sunset": true,
-            "moonPhase": 0
+            "sunset": false,
+            "moonPhase": 18
           }
         }
       ]
@@ -735,42 +578,37 @@
           "end": "2026-02-17T08:00:00.000+05:30",
           "label": "Tue, 17 Feb • 6–8 AM",
           "rating": "perfect",
-          "overallScore": 84,
-          "summary": "Tue, 17 Feb • 6–8 AM: Dune Driving ready — low tide, calm wind.",
+          "primaryScore": 90,
+          "summary": "Tue, 17 Feb • 6–8 AM: Sunset Photography ready — falling tide, calm wind.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 92
-            },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 75
+              "score": 90
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
+              "score": 76
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 53
+              "score": 66
             }
           ],
           "metrics": {
-            "windSpeed": 3.2,
-            "windGust": 0,
-            "windDirection": 112,
-            "temperature": 25.5,
-            "cloudCover": 55,
+            "windSpeed": 9.5,
+            "windGust": 12.5,
+            "windDirection": 119,
+            "temperature": 24,
+            "cloudCover": 30,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.4500000000000002,
+            "tideState": "falling",
             "sunrise": true,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 27
           }
         },
         {
@@ -780,14 +618,14 @@
           "start": "2026-02-17T08:00:00.000+05:30",
           "end": "2026-02-17T10:00:00.000+05:30",
           "label": "Tue, 17 Feb • 8–10 AM",
-          "rating": "perfect",
-          "overallScore": 81,
-          "summary": "Tue, 17 Feb • 8–10 AM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 75,
+          "summary": "Tue, 17 Feb • 8–10 AM: Kayaking ready — high tide, calm wind.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 92
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 75
             },
             {
               "key": "leisure",
@@ -795,28 +633,23 @@
               "score": 70
             },
             {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 53
-            },
-            {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 40
+              "score": 55
             }
           ],
           "metrics": {
-            "windSpeed": 3,
-            "windGust": 0,
-            "windDirection": 103,
-            "temperature": 25.6,
-            "cloudCover": 58,
+            "windSpeed": 11.5,
+            "windGust": 15.5,
+            "windDirection": 141,
+            "temperature": 25.8,
+            "cloudCover": 41,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.65,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 27
           }
         },
         {
@@ -826,43 +659,38 @@
           "start": "2026-02-17T10:00:00.000+05:30",
           "end": "2026-02-17T12:00:00.000+05:30",
           "label": "Tue, 17 Feb • 10 AM–12 PM",
-          "rating": "perfect",
-          "overallScore": 83,
-          "summary": "Tue, 17 Feb • 10 AM–12 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 66,
+          "summary": "Tue, 17 Feb • 10 AM–12 PM: Calmer conditions, better for easy creek time.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 95
-            },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
+              "score": 66
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 53
+              "score": 60
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 45
+              "score": 30
             }
           ],
           "metrics": {
-            "windSpeed": 2.4,
-            "windGust": 0,
-            "windDirection": 81,
-            "temperature": 25.8,
-            "cloudCover": 16,
+            "windSpeed": 13.5,
+            "windGust": 16.5,
+            "windDirection": 163,
+            "temperature": 27.6,
+            "cloudCover": 52,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.35,
+            "tideState": "rising",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 27
           }
         },
         {
@@ -872,43 +700,38 @@
           "start": "2026-02-17T16:00:00.000+05:30",
           "end": "2026-02-17T18:00:00.000+05:30",
           "label": "Tue, 17 Feb • 4–6 PM",
-          "rating": "perfect",
-          "overallScore": 90,
-          "summary": "Tue, 17 Feb • 4–6 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "not_ideal",
+          "primaryScore": 48,
+          "summary": "Tue, 17 Feb • 4–6 PM: Calmer conditions, better for easy creek time.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 100
-            },
-            {
-              "key": "photography",
-              "label": "Sunset Photography",
-              "score": 75
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 48
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
+              "score": 46
             },
             {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 53
+              "key": "photography",
+              "label": "Sunset Photography",
+              "score": 25
             }
           ],
           "metrics": {
-            "windSpeed": 4.6,
-            "windGust": 0,
-            "windDirection": 67,
-            "temperature": 26.1,
-            "cloudCover": 28,
-            "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "windSpeed": 15.5,
+            "windGust": 19.5,
+            "windDirection": 185,
+            "temperature": 29.4,
+            "cloudCover": 63,
+            "precipitation": 1.2,
+            "tideHeight": 1.55,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 27
           }
         },
         {
@@ -918,43 +741,38 @@
           "start": "2026-02-17T18:00:00.000+05:30",
           "end": "2026-02-17T20:00:00.000+05:30",
           "label": "Tue, 17 Feb • 6–8 PM",
-          "rating": "perfect",
-          "overallScore": 87,
-          "summary": "Tue, 17 Feb • 6–8 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 62,
+          "summary": "Tue, 17 Feb • 6–8 PM: Calmer conditions, better for easy creek time.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 95
-            },
-            {
-              "key": "photography",
-              "label": "Sunset Photography",
-              "score": 80
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 62
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
+              "score": 58
             },
             {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 58
+              "key": "photography",
+              "label": "Sunset Photography",
+              "score": 55
             }
           ],
           "metrics": {
-            "windSpeed": 4.8,
-            "windGust": 0,
-            "windDirection": 75,
-            "temperature": 26,
-            "cloudCover": 18,
+            "windSpeed": 17.5,
+            "windGust": 20.5,
+            "windDirection": 207,
+            "temperature": 31.2,
+            "cloudCover": 74,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.75,
+            "tideState": "high",
             "sunrise": false,
             "sunset": true,
-            "moonPhase": 0
+            "moonPhase": 27
           }
         }
       ]
@@ -974,42 +792,37 @@
           "end": "2026-02-18T08:00:00.000+05:30",
           "label": "Wed, 18 Feb • 6–8 AM",
           "rating": "perfect",
-          "overallScore": 87,
-          "summary": "Wed, 18 Feb • 6–8 AM: Dune Driving ready — low tide, calm wind.",
+          "primaryScore": 90,
+          "summary": "Wed, 18 Feb • 6–8 AM: Sunset Photography ready — high tide, calm wind.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 95
-            },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 80
+              "score": 90
+            },
+            {
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 75
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
               "score": 70
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 53
             }
           ],
           "metrics": {
-            "windSpeed": 1.7,
-            "windGust": 0,
-            "windDirection": 90,
-            "temperature": 25.2,
-            "cloudCover": 4,
+            "windSpeed": 11,
+            "windGust": 14,
+            "windDirection": 137,
+            "temperature": 24.6,
+            "cloudCover": 34,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.65,
+            "tideState": "high",
             "sunrise": true,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 36
           }
         },
         {
@@ -1019,24 +832,19 @@
           "start": "2026-02-18T08:00:00.000+05:30",
           "end": "2026-02-18T10:00:00.000+05:30",
           "label": "Wed, 18 Feb • 8–10 AM",
-          "rating": "perfect",
-          "overallScore": 83,
-          "summary": "Wed, 18 Feb • 8–10 AM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 66,
+          "summary": "Wed, 18 Feb • 8–10 AM: Calmer conditions, better for easy creek time.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 95
-            },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
+              "score": 66
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 53
+              "score": 60
             },
             {
               "key": "photography",
@@ -1045,17 +853,17 @@
             }
           ],
           "metrics": {
-            "windSpeed": 1.7,
-            "windGust": 0,
-            "windDirection": 76,
-            "temperature": 25.3,
-            "cloudCover": 2,
+            "windSpeed": 13,
+            "windGust": 17,
+            "windDirection": 159,
+            "temperature": 26.400000000000002,
+            "cloudCover": 45,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.35,
+            "tideState": "rising",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 36
           }
         },
         {
@@ -1065,15 +873,10 @@
           "start": "2026-02-18T10:00:00.000+05:30",
           "end": "2026-02-18T12:00:00.000+05:30",
           "label": "Wed, 18 Feb • 10 AM–12 PM",
-          "rating": "perfect",
-          "overallScore": 83,
-          "summary": "Wed, 18 Feb • 10 AM–12 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 70,
+          "summary": "Wed, 18 Feb • 10 AM–12 PM: Calmer conditions, better for easy creek time.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 95
-            },
             {
               "key": "leisure",
               "label": "Creek Leisure",
@@ -1082,26 +885,26 @@
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 53
+              "score": 60
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 45
+              "score": 30
             }
           ],
           "metrics": {
-            "windSpeed": 2.4,
-            "windGust": 0,
-            "windDirection": 56,
-            "temperature": 25.6,
-            "cloudCover": 2,
+            "windSpeed": 15,
+            "windGust": 18,
+            "windDirection": 181,
+            "temperature": 28.200000000000003,
+            "cloudCover": 56,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.55,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 36
           }
         },
         {
@@ -1111,43 +914,38 @@
           "start": "2026-02-18T16:00:00.000+05:30",
           "end": "2026-02-18T18:00:00.000+05:30",
           "label": "Wed, 18 Feb • 4–6 PM",
-          "rating": "perfect",
-          "overallScore": 85,
-          "summary": "Wed, 18 Feb • 4–6 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 58,
+          "summary": "Wed, 18 Feb • 4–6 PM: Calmer conditions, better for easy creek time.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 95
-            },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
-            },
-            {
-              "key": "photography",
-              "label": "Sunset Photography",
-              "score": 65
+              "score": 58
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 53
+              "score": 57
+            },
+            {
+              "key": "photography",
+              "label": "Sunset Photography",
+              "score": 50
             }
           ],
           "metrics": {
-            "windSpeed": 4.7,
-            "windGust": 0,
-            "windDirection": 57,
-            "temperature": 26,
-            "cloudCover": 11,
+            "windSpeed": 17,
+            "windGust": 21,
+            "windDirection": 203,
+            "temperature": 30,
+            "cloudCover": 67,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.75,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 36
           }
         },
         {
@@ -1157,43 +955,38 @@
           "start": "2026-02-18T18:00:00.000+05:30",
           "end": "2026-02-18T20:00:00.000+05:30",
           "label": "Wed, 18 Feb • 6–8 PM",
-          "rating": "perfect",
-          "overallScore": 87,
-          "summary": "Wed, 18 Feb • 6–8 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "not_ideal",
+          "primaryScore": 35,
+          "summary": "Wed, 18 Feb • 6–8 PM: Calmer conditions, better for easy creek time.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 95
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 35.400000000000006
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 80
+              "score": 27.5
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 58
+              "score": 25.8
             }
           ],
           "metrics": {
-            "windSpeed": 4.8,
-            "windGust": 0,
-            "windDirection": 66,
-            "temperature": 26,
-            "cloudCover": 5,
-            "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "windSpeed": 19,
+            "windGust": 22,
+            "windDirection": 225,
+            "temperature": 31.8,
+            "cloudCover": 78,
+            "precipitation": 0.6,
+            "tideHeight": 1.4500000000000002,
+            "tideState": "falling",
             "sunrise": false,
             "sunset": true,
-            "moonPhase": 0
+            "moonPhase": 36
           }
         }
       ]
@@ -1213,42 +1006,37 @@
           "end": "2026-02-19T08:00:00.000+05:30",
           "label": "Thu, 19 Feb • 6–8 AM",
           "rating": "perfect",
-          "overallScore": 80,
-          "summary": "Thu, 19 Feb • 6–8 AM: Dune Driving ready — low tide, calm wind.",
+          "primaryScore": 90,
+          "summary": "Thu, 19 Feb • 6–8 AM: Sunset Photography ready — rising tide, calm wind.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 88
+              "key": "photography",
+              "label": "Sunset Photography",
+              "score": 90
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
-            },
-            {
-              "key": "photography",
-              "label": "Sunset Photography",
-              "score": 65
+              "score": 76
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 53
+              "score": 70
             }
           ],
           "metrics": {
-            "windSpeed": 2.5,
-            "windGust": 0,
-            "windDirection": 75,
-            "temperature": 25.3,
-            "cloudCover": 98,
+            "windSpeed": 5,
+            "windGust": 8,
+            "windDirection": 155,
+            "temperature": 25.2,
+            "cloudCover": 38,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.35,
+            "tideState": "rising",
             "sunrise": true,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 45
           }
         },
         {
@@ -1258,43 +1046,38 @@
           "start": "2026-02-19T08:00:00.000+05:30",
           "end": "2026-02-19T10:00:00.000+05:30",
           "label": "Thu, 19 Feb • 8–10 AM",
-          "rating": "good",
-          "overallScore": 77,
-          "summary": "Thu, 19 Feb • 8–10 AM: Dune Driving ready — low tide, calm wind.",
+          "rating": "perfect",
+          "primaryScore": 85,
+          "summary": "Thu, 19 Feb • 8–10 AM: Kayaking ready — high tide, calm wind.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 88
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 85
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 53
+              "score": 80
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 30
+              "score": 55
             }
           ],
           "metrics": {
-            "windSpeed": 2.9,
-            "windGust": 0,
-            "windDirection": 63,
-            "temperature": 25.4,
-            "cloudCover": 96,
+            "windSpeed": 7,
+            "windGust": 11,
+            "windDirection": 177,
+            "temperature": 27,
+            "cloudCover": 49,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.55,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 45
           }
         },
         {
@@ -1304,43 +1087,38 @@
           "start": "2026-02-19T10:00:00.000+05:30",
           "end": "2026-02-19T12:00:00.000+05:30",
           "label": "Thu, 19 Feb • 10 AM–12 PM",
-          "rating": "good",
-          "overallScore": 77,
-          "summary": "Thu, 19 Feb • 10 AM–12 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "perfect",
+          "primaryScore": 85,
+          "summary": "Thu, 19 Feb • 10 AM–12 PM: Kayaking ready — high tide, calm wind.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 88
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 85
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 53
+              "score": 80
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 30
+              "score": 40
             }
           ],
           "metrics": {
-            "windSpeed": 3.6,
-            "windGust": 0,
-            "windDirection": 38,
-            "temperature": 25.7,
-            "cloudCover": 99,
+            "windSpeed": 9,
+            "windGust": 12,
+            "windDirection": 199,
+            "temperature": 28.8,
+            "cloudCover": 60,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.75,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 45
           }
         },
         {
@@ -1350,20 +1128,10 @@
           "start": "2026-02-19T16:00:00.000+05:30",
           "end": "2026-02-19T18:00:00.000+05:30",
           "label": "Thu, 19 Feb • 4–6 PM",
-          "rating": "perfect",
-          "overallScore": 85,
-          "summary": "Thu, 19 Feb • 4–6 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 65,
+          "summary": "Thu, 19 Feb • 4–6 PM: Calmer conditions, better for easy creek time.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 95
-            },
-            {
-              "key": "leisure",
-              "label": "Creek Leisure",
-              "score": 70
-            },
             {
               "key": "photography",
               "label": "Sunset Photography",
@@ -1372,21 +1140,26 @@
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 53
+              "score": 58
+            },
+            {
+              "key": "leisure",
+              "label": "Creek Leisure",
+              "score": 54
             }
           ],
           "metrics": {
-            "windSpeed": 5.6,
-            "windGust": 0,
-            "windDirection": 58,
-            "temperature": 26.1,
-            "cloudCover": 6,
+            "windSpeed": 11,
+            "windGust": 15,
+            "windDirection": 221,
+            "temperature": 30.599999999999998,
+            "cloudCover": 71,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.4500000000000002,
+            "tideState": "falling",
             "sunrise": false,
-            "sunset": false,
-            "moonPhase": 0
+            "sunset": true,
+            "moonPhase": 45
           }
         },
         {
@@ -1396,43 +1169,38 @@
           "start": "2026-02-19T18:00:00.000+05:30",
           "end": "2026-02-19T20:00:00.000+05:30",
           "label": "Thu, 19 Feb • 6–8 PM",
-          "rating": "perfect",
-          "overallScore": 87,
-          "summary": "Thu, 19 Feb • 6–8 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 58,
+          "summary": "Thu, 19 Feb • 6–8 PM: Calmer conditions, better for easy creek time.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 95
+              "key": "leisure",
+              "label": "Creek Leisure",
+              "score": 58
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 80
-            },
-            {
-              "key": "leisure",
-              "label": "Creek Leisure",
-              "score": 70
+              "score": 40
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 58
+              "score": 34
             }
           ],
           "metrics": {
-            "windSpeed": 5.5,
-            "windGust": 0,
-            "windDirection": 58,
-            "temperature": 26.1,
-            "cloudCover": 5,
+            "windSpeed": 13,
+            "windGust": 16,
+            "windDirection": 243,
+            "temperature": 32.4,
+            "cloudCover": 82,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.65,
+            "tideState": "high",
             "sunrise": false,
-            "sunset": true,
-            "moonPhase": 0
+            "sunset": false,
+            "moonPhase": 45
           }
         }
       ]
@@ -1452,42 +1220,37 @@
           "end": "2026-02-20T08:00:00.000+05:30",
           "label": "Fri, 20 Feb • 6–8 AM",
           "rating": "perfect",
-          "overallScore": 80,
-          "summary": "Fri, 20 Feb • 6–8 AM: Dune Driving ready — low tide, calm wind.",
+          "primaryScore": 85,
+          "summary": "Fri, 20 Feb • 6–8 AM: Kayaking ready — high tide, calm wind.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 88
-            },
-            {
-              "key": "leisure",
-              "label": "Creek Leisure",
-              "score": 70
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 85
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 65
+              "score": 80
             },
             {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 53
+              "key": "leisure",
+              "label": "Creek Leisure",
+              "score": 80
             }
           ],
           "metrics": {
-            "windSpeed": 4.8,
-            "windGust": 0,
-            "windDirection": 54,
-            "temperature": 26.2,
-            "cloudCover": 88,
+            "windSpeed": 6.5,
+            "windGust": 9.5,
+            "windDirection": 173,
+            "temperature": 25.8,
+            "cloudCover": 18,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.55,
+            "tideState": "high",
             "sunrise": true,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 54
           }
         },
         {
@@ -1498,42 +1261,37 @@
           "end": "2026-02-20T10:00:00.000+05:30",
           "label": "Fri, 20 Feb • 8–10 AM",
           "rating": "perfect",
-          "overallScore": 81,
-          "summary": "Fri, 20 Feb • 8–10 AM: Dune Driving ready — low tide, calm wind.",
+          "primaryScore": 85,
+          "summary": "Fri, 20 Feb • 8–10 AM: Kayaking ready — high tide, calm wind.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 92
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 85
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 53
+              "score": 80
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 40
+              "score": 55
             }
           ],
           "metrics": {
-            "windSpeed": 4.7,
-            "windGust": 0,
-            "windDirection": 51,
-            "temperature": 26.4,
-            "cloudCover": 63,
+            "windSpeed": 8.5,
+            "windGust": 12.5,
+            "windDirection": 195,
+            "temperature": 27.6,
+            "cloudCover": 29,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.75,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 54
           }
         },
         {
@@ -1543,43 +1301,38 @@
           "start": "2026-02-20T10:00:00.000+05:30",
           "end": "2026-02-20T12:00:00.000+05:30",
           "label": "Fri, 20 Feb • 10 AM–12 PM",
-          "rating": "perfect",
-          "overallScore": 83,
-          "summary": "Fri, 20 Feb • 10 AM–12 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 66,
+          "summary": "Fri, 20 Feb • 10 AM–12 PM: Calmer conditions, better for easy creek time.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 95
-            },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
+              "score": 66
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 53
+              "score": 56
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 45
+              "score": 55
             }
           ],
           "metrics": {
-            "windSpeed": 5,
-            "windGust": 0,
-            "windDirection": 40,
-            "temperature": 26.5,
-            "cloudCover": 13,
+            "windSpeed": 10.5,
+            "windGust": 13.5,
+            "windDirection": 217,
+            "temperature": 29.400000000000002,
+            "cloudCover": 40,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.4500000000000002,
+            "tideState": "falling",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 54
           }
         },
         {
@@ -1590,42 +1343,37 @@
           "end": "2026-02-20T18:00:00.000+05:30",
           "label": "Fri, 20 Feb • 4–6 PM",
           "rating": "good",
-          "overallScore": 79,
-          "summary": "Fri, 20 Feb • 4–6 PM: Dune Driving ready — low tide, calm wind.",
+          "primaryScore": 58,
+          "summary": "Fri, 20 Feb • 4–6 PM: Calmer conditions, better for easy creek time.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 88
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 57.6
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 53
+              "score": 38.8
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 50
+              "score": 25
             }
           ],
           "metrics": {
-            "windSpeed": 5.1,
-            "windGust": 0,
-            "windDirection": 45,
-            "temperature": 26.6,
-            "cloudCover": 89,
-            "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "windSpeed": 12.5,
+            "windGust": 16.5,
+            "windDirection": 239,
+            "temperature": 31.2,
+            "cloudCover": 51,
+            "precipitation": 1.2,
+            "tideHeight": 1.65,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 54
           }
         },
         {
@@ -1635,20 +1383,10 @@
           "start": "2026-02-20T18:00:00.000+05:30",
           "end": "2026-02-20T20:00:00.000+05:30",
           "label": "Fri, 20 Feb • 6–8 PM",
-          "rating": "perfect",
-          "overallScore": 81,
-          "summary": "Fri, 20 Feb • 6–8 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 65,
+          "summary": "Fri, 20 Feb • 6–8 PM: Calmer conditions, better for easy creek time.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 88
-            },
-            {
-              "key": "leisure",
-              "label": "Creek Leisure",
-              "score": 70
-            },
             {
               "key": "photography",
               "label": "Sunset Photography",
@@ -1658,20 +1396,25 @@
               "key": "kayaking",
               "label": "Kayaking",
               "score": 58
+            },
+            {
+              "key": "leisure",
+              "label": "Creek Leisure",
+              "score": 54
             }
           ],
           "metrics": {
-            "windSpeed": 4.9,
-            "windGust": 0,
-            "windDirection": 44,
-            "temperature": 26.5,
-            "cloudCover": 77,
+            "windSpeed": 14.5,
+            "windGust": 17.5,
+            "windDirection": 261,
+            "temperature": 33,
+            "cloudCover": 62,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.35,
+            "tideState": "rising",
             "sunrise": false,
             "sunset": true,
-            "moonPhase": 0
+            "moonPhase": 54
           }
         }
       ]
@@ -1691,42 +1434,37 @@
           "end": "2026-02-21T08:00:00.000+05:30",
           "label": "Sat, 21 Feb • 6–8 AM",
           "rating": "perfect",
-          "overallScore": 84,
-          "summary": "Sat, 21 Feb • 6–8 AM: Dune Driving ready — low tide, calm wind.",
+          "primaryScore": 90,
+          "summary": "Sat, 21 Feb • 6–8 AM: Sunset Photography ready — high tide, calm wind.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 92
-            },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 75
-            },
-            {
-              "key": "leisure",
-              "label": "Creek Leisure",
-              "score": 70
+              "score": 90
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 53
+              "score": 85
+            },
+            {
+              "key": "leisure",
+              "label": "Creek Leisure",
+              "score": 80
             }
           ],
           "metrics": {
-            "windSpeed": 2.5,
-            "windGust": 0,
-            "windDirection": 26,
-            "temperature": 26.1,
-            "cloudCover": 68,
+            "windSpeed": 8,
+            "windGust": 11,
+            "windDirection": 191,
+            "temperature": 24,
+            "cloudCover": 22,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.75,
+            "tideState": "high",
             "sunrise": true,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 63
           }
         },
         {
@@ -1736,43 +1474,38 @@
           "start": "2026-02-21T08:00:00.000+05:30",
           "end": "2026-02-21T10:00:00.000+05:30",
           "label": "Sat, 21 Feb • 8–10 AM",
-          "rating": "perfect",
-          "overallScore": 88,
-          "summary": "Sat, 21 Feb • 8–10 AM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 66,
+          "summary": "Sat, 21 Feb • 8–10 AM: Calmer conditions, better for easy creek time.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 100
-            },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
+              "score": 66
+            },
+            {
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 56
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
               "score": 55
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 53
             }
           ],
           "metrics": {
-            "windSpeed": 3.1,
-            "windGust": 0,
-            "windDirection": 21,
-            "temperature": 26.2,
-            "cloudCover": 39,
+            "windSpeed": 10,
+            "windGust": 14,
+            "windDirection": 213,
+            "temperature": 25.8,
+            "cloudCover": 33,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.4500000000000002,
+            "tideState": "falling",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 63
           }
         },
         {
@@ -1782,14 +1515,14 @@
           "start": "2026-02-21T10:00:00.000+05:30",
           "end": "2026-02-21T12:00:00.000+05:30",
           "label": "Sat, 21 Feb • 10 AM–12 PM",
-          "rating": "perfect",
-          "overallScore": 81,
-          "summary": "Sat, 21 Feb • 10 AM–12 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 75,
+          "summary": "Sat, 21 Feb • 10 AM–12 PM: Kayaking ready — high tide, calm wind.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 92
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 75
             },
             {
               "key": "leisure",
@@ -1797,28 +1530,23 @@
               "score": 70
             },
             {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 53
-            },
-            {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 40
+              "score": 45
             }
           ],
           "metrics": {
-            "windSpeed": 3.4,
-            "windGust": 0,
-            "windDirection": 23,
-            "temperature": 26.3,
-            "cloudCover": 54,
+            "windSpeed": 12,
+            "windGust": 15,
+            "windDirection": 235,
+            "temperature": 27.6,
+            "cloudCover": 44,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.65,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 63
           }
         },
         {
@@ -1829,23 +1557,18 @@
           "end": "2026-02-21T18:00:00.000+05:30",
           "label": "Sat, 21 Feb • 4–6 PM",
           "rating": "good",
-          "overallScore": 79,
-          "summary": "Sat, 21 Feb • 4–6 PM: Dune Driving ready — low tide, calm wind.",
+          "primaryScore": 66,
+          "summary": "Sat, 21 Feb • 4–6 PM: Calmer conditions, better for easy creek time.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 88
-            },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
+              "score": 66
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 53
+              "score": 60
             },
             {
               "key": "photography",
@@ -1854,17 +1577,17 @@
             }
           ],
           "metrics": {
-            "windSpeed": 3.3,
-            "windGust": 0,
-            "windDirection": 56,
-            "temperature": 26.7,
-            "cloudCover": 84,
+            "windSpeed": 14,
+            "windGust": 18,
+            "windDirection": 257,
+            "temperature": 29.4,
+            "cloudCover": 55,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.35,
+            "tideState": "rising",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 63
           }
         },
         {
@@ -1874,20 +1597,10 @@
           "start": "2026-02-21T18:00:00.000+05:30",
           "end": "2026-02-21T20:00:00.000+05:30",
           "label": "Sat, 21 Feb • 6–8 PM",
-          "rating": "perfect",
-          "overallScore": 81,
-          "summary": "Sat, 21 Feb • 6–8 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 65,
+          "summary": "Sat, 21 Feb • 6–8 PM: Calmer conditions, better for easy creek time.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 88
-            },
-            {
-              "key": "leisure",
-              "label": "Creek Leisure",
-              "score": 70
-            },
             {
               "key": "photography",
               "label": "Sunset Photography",
@@ -1896,21 +1609,26 @@
             {
               "key": "kayaking",
               "label": "Kayaking",
+              "score": 62
+            },
+            {
+              "key": "leisure",
+              "label": "Creek Leisure",
               "score": 58
             }
           ],
           "metrics": {
-            "windSpeed": 3.2,
-            "windGust": 0,
-            "windDirection": 78,
-            "temperature": 26.6,
-            "cloudCover": 80,
+            "windSpeed": 16,
+            "windGust": 19,
+            "windDirection": 279,
+            "temperature": 31.2,
+            "cloudCover": 66,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.55,
+            "tideState": "high",
             "sunrise": false,
             "sunset": true,
-            "moonPhase": 0
+            "moonPhase": 63
           }
         }
       ]
@@ -1930,42 +1648,37 @@
           "end": "2026-02-22T08:00:00.000+05:30",
           "label": "Sun, 22 Feb • 6–8 AM",
           "rating": "perfect",
-          "overallScore": 80,
-          "summary": "Sun, 22 Feb • 6–8 AM: Dune Driving ready — low tide, calm wind.",
+          "primaryScore": 90,
+          "summary": "Sun, 22 Feb • 6–8 AM: Sunset Photography ready — falling tide, calm wind.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 88
+              "key": "photography",
+              "label": "Sunset Photography",
+              "score": 90
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
-            },
-            {
-              "key": "photography",
-              "label": "Sunset Photography",
-              "score": 65
+              "score": 76
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 53
+              "score": 66
             }
           ],
           "metrics": {
-            "windSpeed": 3.8,
-            "windGust": 0,
-            "windDirection": 231,
-            "temperature": 25.5,
-            "cloudCover": 91,
+            "windSpeed": 9.5,
+            "windGust": 12.5,
+            "windDirection": 209,
+            "temperature": 24.6,
+            "cloudCover": 26,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.4500000000000002,
+            "tideState": "falling",
             "sunrise": true,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 72
           }
         },
         {
@@ -1976,13 +1689,13 @@
           "end": "2026-02-22T10:00:00.000+05:30",
           "label": "Sun, 22 Feb • 8–10 AM",
           "rating": "good",
-          "overallScore": 77,
-          "summary": "Sun, 22 Feb • 8–10 AM: Dune Driving ready — low tide, calm wind.",
+          "primaryScore": 75,
+          "summary": "Sun, 22 Feb • 8–10 AM: Kayaking ready — high tide, calm wind.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 88
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 75
             },
             {
               "key": "leisure",
@@ -1990,28 +1703,23 @@
               "score": 70
             },
             {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 53
-            },
-            {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 30
+              "score": 55
             }
           ],
           "metrics": {
-            "windSpeed": 3.7,
-            "windGust": 0,
-            "windDirection": 228,
-            "temperature": 25.4,
-            "cloudCover": 83,
+            "windSpeed": 11.5,
+            "windGust": 15.5,
+            "windDirection": 231,
+            "temperature": 26.400000000000002,
+            "cloudCover": 37,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.65,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 72
           }
         },
         {
@@ -2022,42 +1730,37 @@
           "end": "2026-02-22T12:00:00.000+05:30",
           "label": "Sun, 22 Feb • 10 AM–12 PM",
           "rating": "good",
-          "overallScore": 77,
-          "summary": "Sun, 22 Feb • 10 AM–12 PM: Dune Driving ready — low tide, calm wind.",
+          "primaryScore": 66,
+          "summary": "Sun, 22 Feb • 10 AM–12 PM: Calmer conditions, better for easy creek time.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 88
-            },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
+              "score": 66
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 53
+              "score": 60
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 30
+              "score": 45
             }
           ],
           "metrics": {
-            "windSpeed": 3.1,
-            "windGust": 0,
-            "windDirection": 195,
-            "temperature": 26,
-            "cloudCover": 73,
+            "windSpeed": 13.5,
+            "windGust": 16.5,
+            "windDirection": 253,
+            "temperature": 28.200000000000003,
+            "cloudCover": 48,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.35,
+            "tideState": "rising",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 72
           }
         },
         {
@@ -2067,20 +1770,10 @@
           "start": "2026-02-22T16:00:00.000+05:30",
           "end": "2026-02-22T18:00:00.000+05:30",
           "label": "Sun, 22 Feb • 4–6 PM",
-          "rating": "perfect",
-          "overallScore": 85,
-          "summary": "Sun, 22 Feb • 4–6 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 65,
+          "summary": "Sun, 22 Feb • 4–6 PM: Calmer conditions, better for easy creek time.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 95
-            },
-            {
-              "key": "leisure",
-              "label": "Creek Leisure",
-              "score": 70
-            },
             {
               "key": "photography",
               "label": "Sunset Photography",
@@ -2089,21 +1782,26 @@
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 53
+              "score": 62
+            },
+            {
+              "key": "leisure",
+              "label": "Creek Leisure",
+              "score": 58
             }
           ],
           "metrics": {
-            "windSpeed": 5.2,
-            "windGust": 0,
-            "windDirection": 136,
-            "temperature": 27,
-            "cloudCover": 11,
+            "windSpeed": 15.5,
+            "windGust": 19.5,
+            "windDirection": 275,
+            "temperature": 30,
+            "cloudCover": 59,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.55,
+            "tideState": "high",
             "sunrise": false,
-            "sunset": false,
-            "moonPhase": 0
+            "sunset": true,
+            "moonPhase": 72
           }
         },
         {
@@ -2113,43 +1811,38 @@
           "start": "2026-02-22T18:00:00.000+05:30",
           "end": "2026-02-22T20:00:00.000+05:30",
           "label": "Sun, 22 Feb • 6–8 PM",
-          "rating": "perfect",
-          "overallScore": 87,
-          "summary": "Sun, 22 Feb • 6–8 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "not_ideal",
+          "primaryScore": 39,
+          "summary": "Sun, 22 Feb • 6–8 PM: Calmer conditions, better for easy creek time.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 95
-            },
-            {
-              "key": "photography",
-              "label": "Sunset Photography",
-              "score": 80
-            },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
+              "score": 38.8
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 58
+              "score": 22.8
+            },
+            {
+              "key": "photography",
+              "label": "Sunset Photography",
+              "score": 20
             }
           ],
           "metrics": {
-            "windSpeed": 5.7,
-            "windGust": 0,
-            "windDirection": 139,
-            "temperature": 26.8,
-            "cloudCover": 5,
-            "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "windSpeed": 17.5,
+            "windGust": 20.5,
+            "windDirection": 297,
+            "temperature": 31.8,
+            "cloudCover": 70,
+            "precipitation": 0.6,
+            "tideHeight": 1.75,
+            "tideState": "high",
             "sunrise": false,
-            "sunset": true,
-            "moonPhase": 0
+            "sunset": false,
+            "moonPhase": 72
           }
         }
       ]
@@ -2169,42 +1862,37 @@
           "end": "2026-02-23T08:00:00.000+05:30",
           "label": "Mon, 23 Feb • 6–8 AM",
           "rating": "perfect",
-          "overallScore": 84,
-          "summary": "Mon, 23 Feb • 6–8 AM: Dune Driving ready — low tide, calm wind.",
+          "primaryScore": 90,
+          "summary": "Mon, 23 Feb • 6–8 AM: Sunset Photography ready — high tide, calm wind.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 92
-            },
             {
               "key": "photography",
               "label": "Sunset Photography",
+              "score": 90
+            },
+            {
+              "key": "kayaking",
+              "label": "Kayaking",
               "score": 75
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
               "score": 70
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 53
             }
           ],
           "metrics": {
-            "windSpeed": 7,
-            "windGust": 0,
-            "windDirection": 218,
-            "temperature": 25.6,
-            "cloudCover": 66,
+            "windSpeed": 11,
+            "windGust": 14,
+            "windDirection": 227,
+            "temperature": 25.2,
+            "cloudCover": 30,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.65,
+            "tideState": "high",
             "sunrise": true,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 81
           }
         },
         {
@@ -2214,43 +1902,38 @@
           "start": "2026-02-23T08:00:00.000+05:30",
           "end": "2026-02-23T10:00:00.000+05:30",
           "label": "Mon, 23 Feb • 8–10 AM",
-          "rating": "perfect",
-          "overallScore": 88,
-          "summary": "Mon, 23 Feb • 8–10 AM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 66,
+          "summary": "Mon, 23 Feb • 8–10 AM: Calmer conditions, better for easy creek time.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 100
-            },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
-            },
-            {
-              "key": "photography",
-              "label": "Sunset Photography",
-              "score": 55
+              "score": 66
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 53
+              "score": 60
+            },
+            {
+              "key": "photography",
+              "label": "Sunset Photography",
+              "score": 45
             }
           ],
           "metrics": {
-            "windSpeed": 6.9,
-            "windGust": 0,
-            "windDirection": 213,
-            "temperature": 25.7,
-            "cloudCover": 28,
+            "windSpeed": 13,
+            "windGust": 17,
+            "windDirection": 249,
+            "temperature": 27,
+            "cloudCover": 41,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.35,
+            "tideState": "rising",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 81
           }
         },
         {
@@ -2260,15 +1943,10 @@
           "start": "2026-02-23T10:00:00.000+05:30",
           "end": "2026-02-23T12:00:00.000+05:30",
           "label": "Mon, 23 Feb • 10 AM–12 PM",
-          "rating": "perfect",
-          "overallScore": 83,
-          "summary": "Mon, 23 Feb • 10 AM–12 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 70,
+          "summary": "Mon, 23 Feb • 10 AM–12 PM: Calmer conditions, better for easy creek time.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 95
-            },
             {
               "key": "leisure",
               "label": "Creek Leisure",
@@ -2277,26 +1955,26 @@
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 53
+              "score": 60
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 45
+              "score": 30
             }
           ],
           "metrics": {
-            "windSpeed": 6.4,
-            "windGust": 0,
-            "windDirection": 194,
-            "temperature": 26.4,
-            "cloudCover": 10,
+            "windSpeed": 15,
+            "windGust": 18,
+            "windDirection": 271,
+            "temperature": 28.8,
+            "cloudCover": 52,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.55,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 81
           }
         },
         {
@@ -2306,43 +1984,38 @@
           "start": "2026-02-23T16:00:00.000+05:30",
           "end": "2026-02-23T18:00:00.000+05:30",
           "label": "Mon, 23 Feb • 4–6 PM",
-          "rating": "perfect",
-          "overallScore": 90,
-          "summary": "Mon, 23 Feb • 4–6 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "not_ideal",
+          "primaryScore": 46,
+          "summary": "Mon, 23 Feb • 4–6 PM: Calmer conditions, better for easy creek time.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 100
-            },
-            {
-              "key": "photography",
-              "label": "Sunset Photography",
-              "score": 75
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 45.6
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
+              "score": 38.8
             },
             {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 53
+              "key": "photography",
+              "label": "Sunset Photography",
+              "score": 25
             }
           ],
           "metrics": {
-            "windSpeed": 7.7,
-            "windGust": 0,
-            "windDirection": 137,
-            "temperature": 26.8,
-            "cloudCover": 46,
-            "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "windSpeed": 17,
+            "windGust": 21,
+            "windDirection": 293,
+            "temperature": 30.599999999999998,
+            "cloudCover": 63,
+            "precipitation": 1.2,
+            "tideHeight": 1.75,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 81
           }
         },
         {
@@ -2352,43 +2025,38 @@
           "start": "2026-02-23T18:00:00.000+05:30",
           "end": "2026-02-23T20:00:00.000+05:30",
           "label": "Mon, 23 Feb • 6–8 PM",
-          "rating": "perfect",
-          "overallScore": 81,
-          "summary": "Mon, 23 Feb • 6–8 PM: Dune Driving ready — low tide, calm wind.",
+          "rating": "good",
+          "primaryScore": 55,
+          "summary": "Mon, 23 Feb • 6–8 PM: Calmer conditions, better for easy creek time.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 88
-            },
-            {
-              "key": "leisure",
-              "label": "Creek Leisure",
-              "score": 70
-            },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 65
+              "score": 55
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 58
+              "score": 39
+            },
+            {
+              "key": "leisure",
+              "label": "Creek Leisure",
+              "score": 39
             }
           ],
           "metrics": {
-            "windSpeed": 7.9,
-            "windGust": 0,
-            "windDirection": 135,
-            "temperature": 26.7,
-            "cloudCover": 76,
+            "windSpeed": 19,
+            "windGust": 22,
+            "windDirection": 315,
+            "temperature": 32.4,
+            "cloudCover": 74,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
+            "tideHeight": 1.4500000000000002,
+            "tideState": "falling",
             "sunrise": false,
             "sunset": true,
-            "moonPhase": 0
+            "moonPhase": 81
           }
         }
       ]
@@ -2408,42 +2076,37 @@
           "end": "2026-02-24T08:00:00.000+05:30",
           "label": "Tue, 24 Feb • 6–8 AM",
           "rating": "perfect",
-          "overallScore": 81,
-          "summary": "Tue, 24 Feb • 6–8 AM: Dune Driving ready — low tide, calm wind.",
+          "primaryScore": 90,
+          "summary": "Tue, 24 Feb • 6–8 AM: Sunset Photography ready — rising tide, calm wind.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 95
+              "key": "photography",
+              "label": "Sunset Photography",
+              "score": 90
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 70
-            },
-            {
-              "key": "photography",
-              "label": "Sunset Photography",
-              "score": 45
+              "score": 76
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 26.5
+              "score": 70
             }
           ],
           "metrics": {
-            "windSpeed": 6.5,
-            "windGust": 0,
-            "windDirection": 206,
-            "temperature": 26.4,
-            "cloudCover": 2,
+            "windSpeed": 5,
+            "windGust": 8,
+            "windDirection": 245,
+            "temperature": 25.8,
+            "cloudCover": 34,
             "precipitation": 0,
-            "tideHeight": null,
-            "tideState": "low",
-            "sunrise": false,
+            "tideHeight": 1.35,
+            "tideState": "rising",
+            "sunrise": true,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 90
           }
         },
         {
@@ -2453,43 +2116,38 @@
           "start": "2026-02-24T08:00:00.000+05:30",
           "end": "2026-02-24T10:00:00.000+05:30",
           "label": "Tue, 24 Feb • 8–10 AM",
-          "rating": "not_ideal",
-          "overallScore": 54,
-          "summary": "Tue, 24 Feb • 8–10 AM: Calmer conditions, better for easy creek time.",
+          "rating": "perfect",
+          "primaryScore": 85,
+          "summary": "Tue, 24 Feb • 8–10 AM: Kayaking ready — high tide, calm wind.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 65
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 85
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 43
+              "score": 80
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 30
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 15
+              "score": 55
             }
           ],
           "metrics": {
-            "windSpeed": 0,
-            "windGust": 0,
-            "windDirection": 0,
-            "temperature": 0,
-            "cloudCover": 0,
+            "windSpeed": 7,
+            "windGust": 11,
+            "windDirection": 267,
+            "temperature": 27.6,
+            "cloudCover": 45,
             "precipitation": 0,
-            "tideHeight": 0,
-            "tideState": "low",
+            "tideHeight": 1.55,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 90
           }
         },
         {
@@ -2499,43 +2157,38 @@
           "start": "2026-02-24T10:00:00.000+05:30",
           "end": "2026-02-24T12:00:00.000+05:30",
           "label": "Tue, 24 Feb • 10 AM–12 PM",
-          "rating": "not_ideal",
-          "overallScore": 54,
-          "summary": "Tue, 24 Feb • 10 AM–12 PM: Calmer conditions, better for easy creek time.",
+          "rating": "perfect",
+          "primaryScore": 85,
+          "summary": "Tue, 24 Feb • 10 AM–12 PM: Kayaking ready — high tide, calm wind.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 65
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 85
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 43
+              "score": 80
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 30
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 15
+              "score": 40
             }
           ],
           "metrics": {
-            "windSpeed": 0,
-            "windGust": 0,
-            "windDirection": 0,
-            "temperature": 0,
-            "cloudCover": 0,
+            "windSpeed": 9,
+            "windGust": 12,
+            "windDirection": 289,
+            "temperature": 29.400000000000002,
+            "cloudCover": 56,
             "precipitation": 0,
-            "tideHeight": 0,
-            "tideState": "low",
+            "tideHeight": 1.75,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 90
           }
         },
         {
@@ -2546,42 +2199,37 @@
           "end": "2026-02-24T18:00:00.000+05:30",
           "label": "Tue, 24 Feb • 4–6 PM",
           "rating": "good",
-          "overallScore": 56,
+          "primaryScore": 60,
           "summary": "Tue, 24 Feb • 4–6 PM: Calmer conditions, better for easy creek time.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 65
-            },
-            {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 50
+              "score": 60
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 43
+              "score": 54
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 15
+              "score": 53
             }
           ],
           "metrics": {
-            "windSpeed": 0,
-            "windGust": 0,
-            "windDirection": 0,
-            "temperature": 0,
-            "cloudCover": 0,
+            "windSpeed": 11,
+            "windGust": 15,
+            "windDirection": 311,
+            "temperature": 31.2,
+            "cloudCover": 67,
             "precipitation": 0,
-            "tideHeight": 0,
-            "tideState": "low",
+            "tideHeight": 1.4500000000000002,
+            "tideState": "falling",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 90
           }
         },
         {
@@ -2592,42 +2240,37 @@
           "end": "2026-02-24T20:00:00.000+05:30",
           "label": "Tue, 24 Feb • 6–8 PM",
           "rating": "good",
-          "overallScore": 56,
+          "primaryScore": 73,
           "summary": "Tue, 24 Feb • 6–8 PM: Calmer conditions, better for easy creek time.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 65
-            },
-            {
-              "key": "photography",
-              "label": "Sunset Photography",
-              "score": 50
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 73
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 43
+              "score": 58
             },
             {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 15
+              "key": "photography",
+              "label": "Sunset Photography",
+              "score": 55
             }
           ],
           "metrics": {
-            "windSpeed": 0,
-            "windGust": 0,
-            "windDirection": 0,
-            "temperature": 0,
-            "cloudCover": 0,
+            "windSpeed": 13,
+            "windGust": 16,
+            "windDirection": 333,
+            "temperature": 33,
+            "cloudCover": 78,
             "precipitation": 0,
-            "tideHeight": 0,
-            "tideState": "low",
+            "tideHeight": 1.65,
+            "tideState": "high",
             "sunrise": false,
-            "sunset": false,
-            "moonPhase": 0
+            "sunset": true,
+            "moonPhase": 90
           }
         }
       ]
@@ -2637,7 +2280,7 @@
       "date": "2026-02-25T00:00:00.000+05:30",
       "label": "Wed, 25 Feb",
       "isToday": false,
-      "isFullMoon": false,
+      "isFullMoon": true,
       "windows": [
         {
           "id": "2026-02-25-daybreak",
@@ -2646,43 +2289,38 @@
           "start": "2026-02-25T06:00:00.000+05:30",
           "end": "2026-02-25T08:00:00.000+05:30",
           "label": "Wed, 25 Feb • 6–8 AM",
-          "rating": "not_ideal",
-          "overallScore": 54,
-          "summary": "Wed, 25 Feb • 6–8 AM: Calmer conditions, better for easy creek time.",
+          "rating": "perfect",
+          "primaryScore": 90,
+          "summary": "Wed, 25 Feb • 6–8 AM: Sunset Photography ready — high tide, calm wind.",
           "activities": [
-            {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 65
-            },
-            {
-              "key": "leisure",
-              "label": "Creek Leisure",
-              "score": 43
-            },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 30
+              "score": 90
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 15
+              "score": 85
+            },
+            {
+              "key": "leisure",
+              "label": "Creek Leisure",
+              "score": 80
             }
           ],
           "metrics": {
-            "windSpeed": 0,
-            "windGust": 0,
-            "windDirection": 0,
-            "temperature": 0,
-            "cloudCover": 0,
+            "windSpeed": 6.5,
+            "windGust": 9.5,
+            "windDirection": 263,
+            "temperature": 24,
+            "cloudCover": 38,
             "precipitation": 0,
-            "tideHeight": 0,
-            "tideState": "low",
-            "sunrise": false,
+            "tideHeight": 1.55,
+            "tideState": "high",
+            "sunrise": true,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 99
           }
         },
         {
@@ -2692,43 +2330,38 @@
           "start": "2026-02-25T08:00:00.000+05:30",
           "end": "2026-02-25T10:00:00.000+05:30",
           "label": "Wed, 25 Feb • 8–10 AM",
-          "rating": "not_ideal",
-          "overallScore": 54,
-          "summary": "Wed, 25 Feb • 8–10 AM: Calmer conditions, better for easy creek time.",
+          "rating": "perfect",
+          "primaryScore": 85,
+          "summary": "Wed, 25 Feb • 8–10 AM: Kayaking ready — high tide, calm wind.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 65
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 85
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 43
+              "score": 80
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 30
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 15
+              "score": 55
             }
           ],
           "metrics": {
-            "windSpeed": 0,
-            "windGust": 0,
-            "windDirection": 0,
-            "temperature": 0,
-            "cloudCover": 0,
+            "windSpeed": 8.5,
+            "windGust": 12.5,
+            "windDirection": 285,
+            "temperature": 25.8,
+            "cloudCover": 49,
             "precipitation": 0,
-            "tideHeight": 0,
-            "tideState": "low",
+            "tideHeight": 1.75,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 99
           }
         },
         {
@@ -2738,43 +2371,38 @@
           "start": "2026-02-25T10:00:00.000+05:30",
           "end": "2026-02-25T12:00:00.000+05:30",
           "label": "Wed, 25 Feb • 10 AM–12 PM",
-          "rating": "not_ideal",
-          "overallScore": 54,
+          "rating": "good",
+          "primaryScore": 66,
           "summary": "Wed, 25 Feb • 10 AM–12 PM: Calmer conditions, better for easy creek time.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 65
-            },
-            {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 43
-            },
-            {
-              "key": "photography",
-              "label": "Sunset Photography",
-              "score": 30
+              "score": 66
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 15
+              "score": 56
+            },
+            {
+              "key": "photography",
+              "label": "Sunset Photography",
+              "score": 40
             }
           ],
           "metrics": {
-            "windSpeed": 0,
-            "windGust": 0,
-            "windDirection": 0,
-            "temperature": 0,
-            "cloudCover": 0,
+            "windSpeed": 10.5,
+            "windGust": 13.5,
+            "windDirection": 307,
+            "temperature": 27.6,
+            "cloudCover": 60,
             "precipitation": 0,
-            "tideHeight": 0,
-            "tideState": "low",
+            "tideHeight": 1.4500000000000002,
+            "tideState": "falling",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 99
           }
         },
         {
@@ -2784,43 +2412,38 @@
           "start": "2026-02-25T16:00:00.000+05:30",
           "end": "2026-02-25T18:00:00.000+05:30",
           "label": "Wed, 25 Feb • 4–6 PM",
-          "rating": "good",
-          "overallScore": 56,
-          "summary": "Wed, 25 Feb • 4–6 PM: Calmer conditions, better for easy creek time.",
+          "rating": "perfect",
+          "primaryScore": 80,
+          "summary": "Wed, 25 Feb • 4–6 PM: Kayaking ready — high tide, wind 13 km/h.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 65
-            },
-            {
-              "key": "photography",
-              "label": "Sunset Photography",
-              "score": 50
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 80
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 43
+              "score": 70
             },
             {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 15
+              "key": "photography",
+              "label": "Sunset Photography",
+              "score": 55
             }
           ],
           "metrics": {
-            "windSpeed": 0,
-            "windGust": 0,
-            "windDirection": 0,
-            "temperature": 0,
-            "cloudCover": 0,
+            "windSpeed": 12.5,
+            "windGust": 16.5,
+            "windDirection": 329,
+            "temperature": 29.4,
+            "cloudCover": 71,
             "precipitation": 0,
-            "tideHeight": 0,
-            "tideState": "low",
+            "tideHeight": 1.65,
+            "tideState": "high",
             "sunrise": false,
-            "sunset": false,
-            "moonPhase": 0
+            "sunset": true,
+            "moonPhase": 99
           }
         },
         {
@@ -2830,43 +2453,38 @@
           "start": "2026-02-25T18:00:00.000+05:30",
           "end": "2026-02-25T20:00:00.000+05:30",
           "label": "Wed, 25 Feb • 6–8 PM",
-          "rating": "good",
-          "overallScore": 56,
+          "rating": "not_ideal",
+          "primaryScore": 54,
           "summary": "Wed, 25 Feb • 6–8 PM: Calmer conditions, better for easy creek time.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 65
+              "key": "leisure",
+              "label": "Creek Leisure",
+              "score": 54
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 50
-            },
-            {
-              "key": "leisure",
-              "label": "Creek Leisure",
-              "score": 43
+              "score": 40
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 15
+              "score": 28.5
             }
           ],
           "metrics": {
-            "windSpeed": 0,
-            "windGust": 0,
-            "windDirection": 0,
-            "temperature": 0,
-            "cloudCover": 0,
+            "windSpeed": 14.5,
+            "windGust": 17.5,
+            "windDirection": 351,
+            "temperature": 31.2,
+            "cloudCover": 82,
             "precipitation": 0,
-            "tideHeight": 0,
-            "tideState": "low",
+            "tideHeight": 1.35,
+            "tideState": "rising",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 99
           }
         }
       ]
@@ -2885,43 +2503,38 @@
           "start": "2026-02-26T06:00:00.000+05:30",
           "end": "2026-02-26T08:00:00.000+05:30",
           "label": "Thu, 26 Feb • 6–8 AM",
-          "rating": "not_ideal",
-          "overallScore": 54,
-          "summary": "Thu, 26 Feb • 6–8 AM: Calmer conditions, better for easy creek time.",
+          "rating": "perfect",
+          "primaryScore": 85,
+          "summary": "Thu, 26 Feb • 6–8 AM: Kayaking ready — high tide, calm wind.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 65
-            },
-            {
-              "key": "leisure",
-              "label": "Creek Leisure",
-              "score": 43
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 85
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 30
+              "score": 80
             },
             {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 15
+              "key": "leisure",
+              "label": "Creek Leisure",
+              "score": 80
             }
           ],
           "metrics": {
-            "windSpeed": 0,
-            "windGust": 0,
-            "windDirection": 0,
-            "temperature": 0,
-            "cloudCover": 0,
+            "windSpeed": 8,
+            "windGust": 11,
+            "windDirection": 281,
+            "temperature": 24.6,
+            "cloudCover": 18,
             "precipitation": 0,
-            "tideHeight": 0,
-            "tideState": "low",
-            "sunrise": false,
+            "tideHeight": 1.75,
+            "tideState": "high",
+            "sunrise": true,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 8
           }
         },
         {
@@ -2931,43 +2544,38 @@
           "start": "2026-02-26T08:00:00.000+05:30",
           "end": "2026-02-26T10:00:00.000+05:30",
           "label": "Thu, 26 Feb • 8–10 AM",
-          "rating": "not_ideal",
-          "overallScore": 54,
+          "rating": "good",
+          "primaryScore": 66,
           "summary": "Thu, 26 Feb • 8–10 AM: Calmer conditions, better for easy creek time.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 65
-            },
-            {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 43
-            },
-            {
-              "key": "photography",
-              "label": "Sunset Photography",
-              "score": 30
+              "score": 66
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 15
+              "score": 56
+            },
+            {
+              "key": "photography",
+              "label": "Sunset Photography",
+              "score": 55
             }
           ],
           "metrics": {
-            "windSpeed": 0,
-            "windGust": 0,
-            "windDirection": 0,
-            "temperature": 0,
-            "cloudCover": 0,
+            "windSpeed": 10,
+            "windGust": 14,
+            "windDirection": 303,
+            "temperature": 26.400000000000002,
+            "cloudCover": 29,
             "precipitation": 0,
-            "tideHeight": 0,
-            "tideState": "low",
+            "tideHeight": 1.4500000000000002,
+            "tideState": "falling",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 8
           }
         },
         {
@@ -2977,43 +2585,38 @@
           "start": "2026-02-26T10:00:00.000+05:30",
           "end": "2026-02-26T12:00:00.000+05:30",
           "label": "Thu, 26 Feb • 10 AM–12 PM",
-          "rating": "not_ideal",
-          "overallScore": 54,
-          "summary": "Thu, 26 Feb • 10 AM–12 PM: Calmer conditions, better for easy creek time.",
+          "rating": "good",
+          "primaryScore": 75,
+          "summary": "Thu, 26 Feb • 10 AM–12 PM: Kayaking ready — high tide, calm wind.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 65
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 75
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 43
+              "score": 70
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 30
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 15
+              "score": 45
             }
           ],
           "metrics": {
-            "windSpeed": 0,
-            "windGust": 0,
-            "windDirection": 0,
-            "temperature": 0,
-            "cloudCover": 0,
+            "windSpeed": 12,
+            "windGust": 15,
+            "windDirection": 325,
+            "temperature": 28.200000000000003,
+            "cloudCover": 40,
             "precipitation": 0,
-            "tideHeight": 0,
-            "tideState": "low",
+            "tideHeight": 1.65,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 8
           }
         },
         {
@@ -3023,43 +2626,38 @@
           "start": "2026-02-26T16:00:00.000+05:30",
           "end": "2026-02-26T18:00:00.000+05:30",
           "label": "Thu, 26 Feb • 4–6 PM",
-          "rating": "good",
-          "overallScore": 56,
+          "rating": "not_ideal",
+          "primaryScore": 46,
           "summary": "Thu, 26 Feb • 4–6 PM: Calmer conditions, better for easy creek time.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 65
-            },
-            {
-              "key": "photography",
-              "label": "Sunset Photography",
-              "score": 50
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 45.6
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 43
+              "score": 34.8
             },
             {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 15
+              "key": "photography",
+              "label": "Sunset Photography",
+              "score": 25
             }
           ],
           "metrics": {
-            "windSpeed": 0,
-            "windGust": 0,
-            "windDirection": 0,
-            "temperature": 0,
-            "cloudCover": 0,
-            "precipitation": 0,
-            "tideHeight": 0,
-            "tideState": "low",
+            "windSpeed": 14,
+            "windGust": 18,
+            "windDirection": 347,
+            "temperature": 30,
+            "cloudCover": 51,
+            "precipitation": 1.2,
+            "tideHeight": 1.35,
+            "tideState": "rising",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 8
           }
         },
         {
@@ -3069,43 +2667,38 @@
           "start": "2026-02-26T18:00:00.000+05:30",
           "end": "2026-02-26T20:00:00.000+05:30",
           "label": "Thu, 26 Feb • 6–8 PM",
-          "rating": "good",
-          "overallScore": 56,
+          "rating": "not_ideal",
+          "primaryScore": 51,
           "summary": "Thu, 26 Feb • 6–8 PM: Calmer conditions, better for easy creek time.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 65
-            },
-            {
-              "key": "photography",
-              "label": "Sunset Photography",
-              "score": 50
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 50.6
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 43
+              "score": 38.8
             },
             {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 15
+              "key": "photography",
+              "label": "Sunset Photography",
+              "score": 32.5
             }
           ],
           "metrics": {
-            "windSpeed": 0,
-            "windGust": 0,
-            "windDirection": 0,
-            "temperature": 0,
-            "cloudCover": 0,
-            "precipitation": 0,
-            "tideHeight": 0,
-            "tideState": "low",
+            "windSpeed": 16,
+            "windGust": 19,
+            "windDirection": 9,
+            "temperature": 31.8,
+            "cloudCover": 62,
+            "precipitation": 0.6,
+            "tideHeight": 1.55,
+            "tideState": "high",
             "sunrise": false,
-            "sunset": false,
-            "moonPhase": 0
+            "sunset": true,
+            "moonPhase": 8
           }
         }
       ]
@@ -3124,43 +2717,38 @@
           "start": "2026-02-27T06:00:00.000+05:30",
           "end": "2026-02-27T08:00:00.000+05:30",
           "label": "Fri, 27 Feb • 6–8 AM",
-          "rating": "not_ideal",
-          "overallScore": 54,
-          "summary": "Fri, 27 Feb • 6–8 AM: Calmer conditions, better for easy creek time.",
+          "rating": "perfect",
+          "primaryScore": 90,
+          "summary": "Fri, 27 Feb • 6–8 AM: Sunset Photography ready — falling tide, calm wind.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 65
+              "key": "photography",
+              "label": "Sunset Photography",
+              "score": 90
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 43
-            },
-            {
-              "key": "photography",
-              "label": "Sunset Photography",
-              "score": 30
+              "score": 76
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 15
+              "score": 66
             }
           ],
           "metrics": {
-            "windSpeed": 0,
-            "windGust": 0,
-            "windDirection": 0,
-            "temperature": 0,
-            "cloudCover": 0,
+            "windSpeed": 9.5,
+            "windGust": 12.5,
+            "windDirection": 299,
+            "temperature": 25.2,
+            "cloudCover": 22,
             "precipitation": 0,
-            "tideHeight": 0,
-            "tideState": "low",
-            "sunrise": false,
+            "tideHeight": 1.4500000000000002,
+            "tideState": "falling",
+            "sunrise": true,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 17
           }
         },
         {
@@ -3170,43 +2758,38 @@
           "start": "2026-02-27T08:00:00.000+05:30",
           "end": "2026-02-27T10:00:00.000+05:30",
           "label": "Fri, 27 Feb • 8–10 AM",
-          "rating": "not_ideal",
-          "overallScore": 54,
-          "summary": "Fri, 27 Feb • 8–10 AM: Calmer conditions, better for easy creek time.",
+          "rating": "good",
+          "primaryScore": 75,
+          "summary": "Fri, 27 Feb • 8–10 AM: Kayaking ready — high tide, calm wind.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 65
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 75
             },
             {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 43
+              "score": 70
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 30
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 15
+              "score": 55
             }
           ],
           "metrics": {
-            "windSpeed": 0,
-            "windGust": 0,
-            "windDirection": 0,
-            "temperature": 0,
-            "cloudCover": 0,
+            "windSpeed": 11.5,
+            "windGust": 15.5,
+            "windDirection": 321,
+            "temperature": 27,
+            "cloudCover": 33,
             "precipitation": 0,
-            "tideHeight": 0,
-            "tideState": "low",
+            "tideHeight": 1.65,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 17
           }
         },
         {
@@ -3216,43 +2799,38 @@
           "start": "2026-02-27T10:00:00.000+05:30",
           "end": "2026-02-27T12:00:00.000+05:30",
           "label": "Fri, 27 Feb • 10 AM–12 PM",
-          "rating": "not_ideal",
-          "overallScore": 54,
+          "rating": "good",
+          "primaryScore": 66,
           "summary": "Fri, 27 Feb • 10 AM–12 PM: Calmer conditions, better for easy creek time.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 65
-            },
-            {
               "key": "leisure",
               "label": "Creek Leisure",
-              "score": 43
-            },
-            {
-              "key": "photography",
-              "label": "Sunset Photography",
-              "score": 30
+              "score": 66
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 15
+              "score": 60
+            },
+            {
+              "key": "photography",
+              "label": "Sunset Photography",
+              "score": 45
             }
           ],
           "metrics": {
-            "windSpeed": 0,
-            "windGust": 0,
-            "windDirection": 0,
-            "temperature": 0,
-            "cloudCover": 0,
+            "windSpeed": 13.5,
+            "windGust": 16.5,
+            "windDirection": 343,
+            "temperature": 28.8,
+            "cloudCover": 44,
             "precipitation": 0,
-            "tideHeight": 0,
-            "tideState": "low",
+            "tideHeight": 1.35,
+            "tideState": "rising",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 17
           }
         },
         {
@@ -3263,42 +2841,37 @@
           "end": "2026-02-27T18:00:00.000+05:30",
           "label": "Fri, 27 Feb • 4–6 PM",
           "rating": "good",
-          "overallScore": 56,
+          "primaryScore": 58,
           "summary": "Fri, 27 Feb • 4–6 PM: Calmer conditions, better for easy creek time.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 65
+              "key": "leisure",
+              "label": "Creek Leisure",
+              "score": 58
+            },
+            {
+              "key": "kayaking",
+              "label": "Kayaking",
+              "score": 57
             },
             {
               "key": "photography",
               "label": "Sunset Photography",
               "score": 50
-            },
-            {
-              "key": "leisure",
-              "label": "Creek Leisure",
-              "score": 43
-            },
-            {
-              "key": "kayaking",
-              "label": "Kayaking",
-              "score": 15
             }
           ],
           "metrics": {
-            "windSpeed": 0,
-            "windGust": 0,
-            "windDirection": 0,
-            "temperature": 0,
-            "cloudCover": 0,
+            "windSpeed": 15.5,
+            "windGust": 19.5,
+            "windDirection": 5,
+            "temperature": 30.599999999999998,
+            "cloudCover": 55,
             "precipitation": 0,
-            "tideHeight": 0,
-            "tideState": "low",
+            "tideHeight": 1.55,
+            "tideState": "high",
             "sunrise": false,
             "sunset": false,
-            "moonPhase": 0
+            "moonPhase": 17
           }
         },
         {
@@ -3309,46 +2882,41 @@
           "end": "2026-02-27T20:00:00.000+05:30",
           "label": "Fri, 27 Feb • 6–8 PM",
           "rating": "good",
-          "overallScore": 56,
+          "primaryScore": 65,
           "summary": "Fri, 27 Feb • 6–8 PM: Calmer conditions, better for easy creek time.",
           "activities": [
             {
-              "key": "dune",
-              "label": "Dune Driving",
-              "score": 65
-            },
-            {
               "key": "photography",
               "label": "Sunset Photography",
-              "score": 50
-            },
-            {
-              "key": "leisure",
-              "label": "Creek Leisure",
-              "score": 43
+              "score": 65
             },
             {
               "key": "kayaking",
               "label": "Kayaking",
-              "score": 15
+              "score": 58
+            },
+            {
+              "key": "leisure",
+              "label": "Creek Leisure",
+              "score": 58
             }
           ],
           "metrics": {
-            "windSpeed": 0,
-            "windGust": 0,
-            "windDirection": 0,
-            "temperature": 0,
-            "cloudCover": 0,
+            "windSpeed": 17.5,
+            "windGust": 20.5,
+            "windDirection": 27,
+            "temperature": 32.4,
+            "cloudCover": 66,
             "precipitation": 0,
-            "tideHeight": 0,
-            "tideState": "low",
+            "tideHeight": 1.75,
+            "tideState": "high",
             "sunrise": false,
-            "sunset": false,
-            "moonPhase": 0
+            "sunset": true,
+            "moonPhase": 17
           }
         }
       ]
     }
   ],
-  "summary": "Mon, 16 Feb • 6–8 PM: Dune Driving and Sunset Photography look ideal."
+  "summary": "Sun, 15 Feb • 6–8 AM: Sunset Photography, Kayaking, and others look ideal."
 }

@@ -18,6 +18,10 @@
   --color-bttv-good: #5faea8;
   --color-bttv-neutral: rgba(21, 27, 38, 0.4);
   --color-bttv-border: rgba(21, 27, 38, 0.15);
+  --color-activity-kayak: #0b6f6c;
+  --color-activity-dune: #be6c2d;
+  --color-activity-photography: #3f66c4;
+  --color-activity-leisure: #d8a53d;
 
   /* Typography */
   --font-heading: 'DM Serif Display', 'Playfair Display', serif;

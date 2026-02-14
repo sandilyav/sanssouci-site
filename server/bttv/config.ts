@@ -20,7 +20,7 @@ export const WEATHER_PARAMS = [
 
 export const ACTIVITY_LABELS = {
   kayaking: 'Kayaking',
-  dune: 'Dune Driving',
+  // dune: 'Dune Driving', // Temporarily disabled while we tune scoring
   photography: 'Sunset Photography',
   leisure: 'Creek Leisure'
 } as const;

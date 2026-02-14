@@ -24,17 +24,30 @@ const formatRange = (startIso: string, endIso: string) => {
   return `${timeFormatter.format(start)} – ${timeFormatter.format(end)}`;
 };
 
+const summarizeWindowBody = (window: WindowRecommendation) => {
+  const prefix = `${window.label}: `;
+  return window.summary.startsWith(prefix) ? window.summary.slice(prefix.length) : window.summary;
+};
+
 const blockLabelMap: Record<string, string> = WINDOW_BLOCKS.reduce(
   (acc, block) => ({ ...acc, [block.id]: block.label }),
   {} as Record<string, string>
 );
 
-const getPrimaryActivities = (activities: ActivityScore[]) => {
-  const qualifying = activities.filter((activity) => activity.score >= 75);
-  if (qualifying.length >= 2) return qualifying.slice(0, 2);
-  if (qualifying.length === 1) return qualifying;
-  return activities.slice(0, 1);
+const getActivityMeta = (key: ActivityScore['key']) =>
+  (ACTIVITY_META as Record<string, (typeof ACTIVITY_META)[keyof typeof ACTIVITY_META]>)[key] ?? null;
+
+const normalizeActivities = (activities: ActivityScore[]) => {
+  const known = activities.filter((activity) => Boolean(getActivityMeta(activity.key)));
+  return known.length ? known : activities;
 };
+
+const getPrimaryActivity = (activities: ActivityScore[]) => normalizeActivities(activities)[0];
+
+const getSecondaryActivities = (activities: ActivityScore[]) =>
+  normalizeActivities(activities)
+    .slice(1)
+    .filter((activity) => activity.score >= 60);
 
 const metricItems = (window: WindowRecommendation) => [
   {
@@ -56,54 +69,93 @@ const metricItems = (window: WindowRecommendation) => [
       : null
 ].filter(Boolean) as Array<{ icon: IconName; label: string }>;
 
-const DetailSheet = ({ window, onClose }: { window: WindowRecommendation; onClose: () => void }) => (
-  <div className="bttv-sheet" role="dialog" aria-modal="true" aria-label="Best time window details">
-    <div className="bttv-sheet__body">
-      <button className="bttv-sheet__close" type="button" onClick={onClose}>
-        Close
-      </button>
-      <p className="bttv-sheet__eyebrow">{RATING_COPY[window.rating].title}</p>
-      <h4>{window.label}</h4>
-      <p>{window.summary}</p>
-      <div className="bttv-sheet__chips">
-        {getPrimaryActivities(window.activities).map((activity) => (
-          <span key={activity.key} className="bttv-chip">
-            <Icon name={ACTIVITY_META[activity.key].icon} size={16} aria-hidden />
-            {ACTIVITY_META[activity.key].label}
+const ActivityChips = ({ window }: { window: WindowRecommendation }) => {
+  const primaryActivity = getPrimaryActivity(window.activities);
+  const secondaries = getSecondaryActivities(window.activities);
+  const primaryMeta = getActivityMeta(primaryActivity.key);
+  const primaryCopy = window.rating === 'perfect' ? 'Perfect for' : 'Good for';
+
+  return (
+    <>
+      <span
+        className={clsx(
+          'bttv-chip',
+          'bttv-chip--primary',
+          primaryMeta && `bttv-chip--activity-${primaryActivity.key}`
+        )}
+      >
+        <Icon name={(primaryMeta?.icon ?? 'leaf') as IconName} size={16} aria-hidden />
+        {primaryCopy} {primaryMeta?.label ?? primaryActivity.label}
+      </span>
+      {secondaries.map((activity) => {
+        const meta = getActivityMeta(activity.key);
+        return (
+          <span
+            key={activity.key}
+            className={clsx('bttv-chip', 'bttv-chip--secondary', meta && `bttv-chip--activity-${activity.key}`)}
+          >
+            <Icon name={(meta?.icon ?? 'leaf') as IconName} size={16} aria-hidden />
+            Good for {meta?.label ?? activity.label}
           </span>
-        ))}
+        );
+      })}
+    </>
+  );
+};
+
+const DetailSheet = ({ window, onClose }: { window: WindowRecommendation; onClose: () => void }) => {
+  const primaryActivity = getPrimaryActivity(window.activities);
+  const eyebrowMeta = getActivityMeta(primaryActivity.key);
+  return (
+    <div className="bttv-sheet" role="dialog" aria-modal="true" aria-label="Best time window details">
+      <div className="bttv-sheet__body">
+        <button className="bttv-sheet__close" type="button" onClick={onClose}>
+          Close
+        </button>
+        <p className="bttv-sheet__eyebrow">{eyebrowMeta?.label ?? primaryActivity.label}</p>
+        <h4>{window.label}</h4>
+        <p>{summarizeWindowBody(window)}</p>
+
+        <div className="bttv-sheet__chips">
+          <ActivityChips window={window} />
+        </div>
+        <dl>
+          {metricItems(window).map((metric) => (
+            <Fragment key={metric.label}>
+              <dt>
+                <Icon name={metric.icon} size={16} aria-hidden />
+              </dt>
+              <dd>{metric.label}</dd>
+            </Fragment>
+          ))}
+        </dl>
+        <button className="button button-primary bttv-sheet__cta" type="button">
+          Plan for this window
+        </button>
       </div>
-      <dl>
-        {metricItems(window).map((metric) => (
-          <Fragment key={metric.label}>
-            <dt>
-              <Icon name={metric.icon} size={16} aria-hidden />
-            </dt>
-            <dd>{metric.label}</dd>
-          </Fragment>
-        ))}
-      </dl>
-      <button className="button button-primary bttv-sheet__cta" type="button">
-        Plan for this window
-      </button>
+      <div className="bttv-sheet__scrim" onClick={onClose} />
     </div>
-    <div className="bttv-sheet__scrim" onClick={onClose} />
-  </div>
-);
+  );
+};
 
 const bestWindowForDay = (day?: DayRecommendations) => {
   if (!day || !day.windows.length) return null;
-  return [...day.windows].sort((a, b) => b.overallScore - a.overallScore)[0];
+  return [...day.windows].sort((a, b) => b.primaryScore - a.primaryScore)[0];
 };
+
+const VISIBLE_COLUMNS = 5;
 
 const BestTimeToVisitPanel = () => {
   const { data, loading, error } = useBestTimesData();
   const [sheetWindow, setSheetWindow] = useState<WindowRecommendation | null>(null);
   const [selectedWindow, setSelectedWindow] = useState<WindowRecommendation | null>(null);
+  const [windowStart, setWindowStart] = useState(0);
 
   const days = data?.days ?? [];
 
-  const visibleDays = days.slice(0, 5);
+  const maxStart = Math.max(0, days.length - VISIBLE_COLUMNS);
+  const clampedStart = Math.min(windowStart, maxStart);
+  const visibleDays = days.slice(clampedStart, clampedStart + VISIBLE_COLUMNS);
 
   const monthLabel = useMemo(() => {
     if (!visibleDays.length) return '';
@@ -121,6 +173,12 @@ const BestTimeToVisitPanel = () => {
     });
     return map;
   }, [days]);
+
+  useEffect(() => {
+    if (windowStart > maxStart) {
+      setWindowStart(maxStart);
+    }
+  }, [windowStart, maxStart]);
 
   useEffect(() => {
     const currentDay = visibleDays[0] ?? days[0];
@@ -149,16 +207,6 @@ const BestTimeToVisitPanel = () => {
 
   const detailWindow = selectedWindow;
 
-  const footerCopy = useMemo(() => {
-    if (!data) return null;
-    const updated = new Date(data.generatedAt);
-    const formatted = new Intl.DateTimeFormat('en-IN', {
-      hour: 'numeric',
-      minute: '2-digit'
-    }).format(updated);
-    return `Updated ${formatted}`;
-  }, [data]);
-
   return (
     <div className="bttv-panel">
       <div className="bttv-panel__header">
@@ -167,15 +215,12 @@ const BestTimeToVisitPanel = () => {
           <h3>Best time to visit</h3>
         </div>
         <div className="bttv-panel__legend">
-          <span>
-            <i className="bttv-dot bttv-dot--perfect" aria-hidden /> Perfect
-          </span>
-          <span>
-            <i className="bttv-dot bttv-dot--good" aria-hidden /> Good
-          </span>
-          <span>
-            <i className="bttv-dot bttv-dot--neutral" aria-hidden /> Not ideal
-          </span>
+          {(['kayaking', 'photography', 'leisure'] as const).map((key) => (
+            <span key={key}>
+              <i className={clsx('bttv-dot', `bttv-dot--activity-${key}`)} aria-hidden />
+              {ACTIVITY_META[key].label}
+            </span>
+          ))}
         </div>
       </div>
 
@@ -203,75 +248,100 @@ const BestTimeToVisitPanel = () => {
       {!loading && !error && days.length > 0 && (
         <div className="bttv-grid" aria-label="Best time windows">
           {visibleDays.length > 0 && (
-            <table className="bttv-grid-table" aria-live="polite">
-              <thead>
-                {monthLabel && (
-                  <tr className="bttv-grid-row--month">
+            <div className="bttv-grid-track">
+              <table className="bttv-grid-table" aria-live="polite">
+                <thead>
+                  {monthLabel && (
+                    <tr className="bttv-grid-row--month">
+                      <th scope="col" aria-hidden />
+                      <th scope="col" colSpan={visibleDays.length} aria-label="Month">
+                        {monthLabel}
+                      </th>
+                    </tr>
+                  )}
+                  <tr className="bttv-grid-row--dates">
                     <th scope="col" aria-hidden />
-                    <th scope="col" colSpan={visibleDays.length} aria-label="Month">
-                      {monthLabel}
-                    </th>
-                  </tr>
-                )}
-                <tr className="bttv-grid-row--dates">
-                  <th scope="col" aria-hidden />
-                  {visibleDays.map((day) => {
-                    const date = new Date(day.date);
-                    const dayOfMonth = date.toLocaleDateString('en-IN', { day: 'numeric' });
-                    return (
-                      <th key={`${day.id}-date`} scope="col" aria-label={`Date ${dayOfMonth}`}>
-                        {dayOfMonth}
-                      </th>
-                    );
-                  })}
-                </tr>
-                <tr className="bttv-grid-row--days">
-                  <th scope="col" aria-hidden />
-                  {visibleDays.map((day) => {
-                    const date = new Date(day.date);
-                    const weekday = date
-                      .toLocaleDateString('en-IN', { weekday: 'short' })
-                      .charAt(0)
-                      .toUpperCase();
-                    return (
-                      <th key={`${day.id}-day`} scope="col" aria-label={date.toLocaleDateString('en-IN', {
-                        weekday: 'long'
-                      })}>
-                        {weekday}
-                      </th>
-                    );
-                  })}
-                </tr>
-              </thead>
-              <tbody>
-                {WINDOW_BLOCKS.map((block) => (
-                  <tr key={block.id}>
-                    <th scope="row">{block.label}</th>
                     {visibleDays.map((day) => {
-                      const window = windowLookup[day.id]?.[block.id];
-                      if (!window) {
-                        return (
-                          <td key={`${day.id}-${block.id}`}>
-                            <span className="bttv-circle bttv-circle--empty" aria-hidden />
-                          </td>
-                        );
-                      }
-                      const isSelected = detailWindow?.id === window.id;
+                      const date = new Date(day.date);
+                      const dayOfMonth = date.toLocaleDateString('en-IN', { day: 'numeric' });
                       return (
-                        <td key={window.id}>
-                          <button
-                            type="button"
-                            className={clsx('bttv-circle', ratingClassMap[window.rating], isSelected && 'bttv-circle--selected')}
-                            aria-label={`${day.label} ${block.label} is ${RATING_COPY[window.rating].title}`}
-                            onClick={() => handleSelectWindow(window)}
-                          />
-                        </td>
+                        <th key={`${day.id}-date`} scope="col" aria-label={`Date ${dayOfMonth}`}>
+                          {dayOfMonth}
+                        </th>
                       );
                     })}
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                  <tr className="bttv-grid-row--days">
+                    <th scope="col" aria-hidden />
+                    {visibleDays.map((day) => {
+                      const date = new Date(day.date);
+                      const weekday = date
+                        .toLocaleDateString('en-IN', { weekday: 'short' })
+                        .charAt(0)
+                        .toUpperCase();
+                      return (
+                        <th key={`${day.id}-day`} scope="col" aria-label={date.toLocaleDateString('en-IN', {
+                          weekday: 'long'
+                        })}>
+                          {weekday}
+                        </th>
+                      );
+                    })}
+                  </tr>
+                </thead>
+                <tbody>
+                  {WINDOW_BLOCKS.map((block) => (
+                    <tr key={block.id}>
+                      <th scope="row">{block.label}</th>
+                      {visibleDays.map((day) => {
+                        const window = windowLookup[day.id]?.[block.id];
+                        if (!window) {
+                          return (
+                            <td key={`${day.id}-${block.id}`}>
+                              <span className="bttv-circle bttv-circle--empty" aria-hidden />
+                            </td>
+                          );
+                        }
+                        const primaryActivity = getPrimaryActivity(window.activities);
+                        const primaryMeta = getActivityMeta(primaryActivity.key);
+                        const isSelected = detailWindow?.id === window.id;
+                        return (
+                          <td key={window.id}>
+                            <button
+                              type="button"
+                              className={clsx(
+                                'bttv-circle',
+                                ratingClassMap[window.rating],
+                                primaryMeta && `bttv-circle--activity-${primaryActivity.key}`,
+                                isSelected && 'bttv-circle--selected'
+                              )}
+                              aria-label={`${day.label} ${block.label} is ${RATING_COPY[window.rating].title}`}
+                              onClick={() => handleSelectWindow(window)}
+                            />
+                          </td>
+                        );
+                      })}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              {days.length > VISIBLE_COLUMNS && (
+                <div className="bttv-grid-scroll">
+                  <input
+                    type="range"
+                    min={0}
+                    max={maxStart}
+                    step={1}
+                    value={clampedStart}
+                    onChange={(event) => setWindowStart(Number(event.target.value))}
+                    aria-label="Scroll best time calendar"
+                  />
+                  <span>
+                    Showing days {clampedStart + 1}–{Math.min(days.length, clampedStart + VISIBLE_COLUMNS)} of {days.length}
+                  </span>
+                </div>
+              )}
+            </div>
           )}
         </div>
       )}
@@ -281,15 +351,9 @@ const BestTimeToVisitPanel = () => {
           <div>
             <p className="bttv-detail__eyebrow">{RATING_COPY[detailWindow.rating].title}</p>
             <h4>{detailWindow.label}</h4>
-            <p className="bttv-detail__time">{formatRange(detailWindow.start, detailWindow.end)}</p>
-            <p className="bttv-detail__summary">{detailWindow.summary}</p>
+            <p className="bttv-detail__summary">{summarizeWindowBody(detailWindow)}</p>
             <div className="bttv-detail__chips">
-              {getPrimaryActivities(detailWindow.activities).map((activity) => (
-                <span key={activity.key} className="bttv-chip">
-                  <Icon name={ACTIVITY_META[activity.key].icon} size={16} aria-hidden />
-                  {ACTIVITY_META[activity.key].label}
-                </span>
-              ))}
+              <ActivityChips window={detailWindow} />
             </div>
           </div>
           <ul className="bttv-detail__metrics">

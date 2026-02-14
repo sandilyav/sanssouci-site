@@ -11,11 +11,13 @@ export const WINDOW_BLOCKS = [
 export type WindowBlock = (typeof WINDOW_BLOCKS)[number];
 export type WindowBlockId = WindowBlock['id'];
 
-export const ACTIVITY_META: Record< ActivityKey, { label: string; icon: 'kayak' | 'dune' | 'camera' | 'leaf' } > = {
-  kayaking: { label: 'Kayaking', icon: 'kayak' },
-  dune: { label: 'Dune Driving', icon: 'dune' },
-  photography: { label: 'Sunset Photography', icon: 'camera' },
-  leisure: { label: 'Creek Leisure', icon: 'leaf' }
+export const ACTIVITY_META: Record<
+  ActivityKey,
+  { label: string; icon: 'kayak' | 'camera' | 'leaf' | 'clock'; colorVar: string }
+> = {
+  kayaking: { label: 'Kayaking', icon: 'kayak', colorVar: '--color-activity-kayak' },
+  photography: { label: 'Photography', icon: 'camera', colorVar: '--color-activity-photography' },
+  leisure: { label: 'Creek Leisure', icon: 'clock', colorVar: '--color-activity-leisure' }
 };
 
 export const RATING_COPY: Record< 'perfect' | 'good' | 'not_ideal', { title: string; description: string } > = {
