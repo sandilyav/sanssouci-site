@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 
+import BestTimeToVisitPanel from '../components/ui/BestTimeToVisitPanel';
 import Section from '../components/ui/Section';
 import {
   heroContent,
@@ -18,10 +19,9 @@ const HomePage = () => {
 
   return (
     <>
-      <section className="section hero" id="hero">
+      <section className="section hero hero--photo" id="hero">
         <div className="container hero-grid">
           <div className="hero__content">
-            <p className="tag">Chennai · Ennore Creek</p>
             <h1>{heroContent.headline}</h1>
             <p>{heroContent.subhead}</p>
             <div className="hero__cta">
@@ -41,8 +41,8 @@ const HomePage = () => {
               ))}
             </div>
           </div>
-          <div className="hero__media">
-            <img src="/media/spot-sunset.jpg" alt="Sunset jetty at Sans Souci" />
+          <div className="hero__media hero__best-time">
+            <BestTimeToVisitPanel />
           </div>
         </div>
       </section>

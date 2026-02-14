@@ -12,6 +12,12 @@
   --color-border: rgba(15, 27, 38, 0.12);
   --color-accent: #f5b841;
   --color-on-primary: #ffffff;
+  --color-hero-overlay: rgba(15, 27, 38, 0.72);
+  --color-panel-overlay: rgba(255, 255, 255, 0.88);
+  --color-bttv-perfect: #0b6f6c;
+  --color-bttv-good: #5faea8;
+  --color-bttv-neutral: rgba(21, 27, 38, 0.4);
+  --color-bttv-border: rgba(21, 27, 38, 0.15);
 
   /* Typography */
   --font-heading: 'DM Serif Display', 'Playfair Display', serif;
@@ -33,6 +39,10 @@
   --space-48: 48px;
   --space-64: 64px;
   --space-80: 80px;
+
+  /* Component-specific sizing */
+  --bttv-circle-size: 64px;
+  --bttv-column-width: 176px;
 
   /* Layout */
   --container-max: 1200px;
