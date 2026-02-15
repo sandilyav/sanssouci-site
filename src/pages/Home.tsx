@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import BestTimeToVisitPanel from '../components/ui/BestTimeToVisitPanel';
@@ -7,39 +8,56 @@ import {
   reelGrid,
   experiences,
   photoSpots,
-  whySansSouci,
+  placeProof,
+  laneChoices,
+  adventureFlow,
+  photoFlow,
   planTimeline,
   travelCopy,
   contactInfo
 } from '../data/content';
 
+const heroBackdrops = ['/backdrops/Backdrop1.jpeg', '/backdrops/Backdrop2.jpeg', '/backdrops/Backdrop3.jpeg'];
+
 const HomePage = () => {
+  const [heroIndex, setHeroIndex] = useState(0);
   const featuredExperiences = experiences.slice(0, 3);
   const featuredSpots = photoSpots.slice(0, 3);
 
+  useEffect(() => {
+    if (heroBackdrops.length <= 1) return;
+
+    const interval = window.setInterval(() => {
+      setHeroIndex((current) => (current + 1) % heroBackdrops.length);
+    }, 12000);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
   return (
     <>
-      <section className="section hero hero--photo" id="hero">
+      <section
+        className="section hero hero--photo hero--photo-rotating"
+        id="hero"
+        style={{
+          ['--hero-backdrop-url' as string]: `url('${heroBackdrops[heroIndex]}')`
+        }}
+      >
         <div className="container hero-grid">
           <div className="hero__content">
             <h1>{heroContent.headline}</h1>
             <p>{heroContent.subhead}</p>
+            <p>
+              Sunrise mist, late-evening glow, water, trees, boats, and rustic seating—every corner here is framed
+              for the camera. You bring the friends, we’ll handle the backdrops.
+            </p>
+            <p>Want more than just photos? Stay on for creek angling or slip into a kayak and see Ennore from the water.</p>
             <div className="hero__cta">
-              <Link to="/photo-spots" className="button button-primary">
+              <Link to="/booking" className="button button-primary">
                 {heroContent.primaryCta}
               </Link>
-              <Link to="/plan" className="button button-secondary">
-                {heroContent.secondaryCta}
-              </Link>
             </div>
-            <div className="hero__stats">
-              {heroContent.stats.map((stat) => (
-                <div key={stat.label} className="hero__stat">
-                  <strong>{stat.value}</strong>
-                  <span>{stat.label}</span>
-                </div>
-              ))}
-            </div>
+            <p className="hero__footnote">* Rs. 100 per person for 1 hour stay – 8am to 6pm.</p>
           </div>
           <div className="hero__media hero__best-time">
             <BestTimeToVisitPanel />
@@ -48,61 +66,42 @@ const HomePage = () => {
       </section>
 
       <Section
-        eyebrow="Reel Preview"
-        title="What your feed could look like this weekend"
-        subtitle="Vertical-native tiles curated from our recent shoots. All shot on phones, edited on site."
+        eyebrow="Why This Place"
+        title="A creekside location built for motion, light, and pause"
+        subtitle="From Ennore Creek calm to cinematic sunsets, Sans Souci works for both active sessions and short scenic stops."
       >
-        <div className="reel-grid">
-          {reelGrid.map((reel) => (
-            <article key={reel.id} className="reel-card">
-              <img src={reel.image} alt={reel.label} />
-              <span>{reel.label}</span>
+        <div className="grid grid-2">
+          {placeProof.map((proof) => (
+            <article key={proof.title} className="card">
+              <h3>{proof.title}</h3>
+              <p>{proof.detail}</p>
             </article>
           ))}
         </div>
       </Section>
 
       <Section
-        eyebrow="Photo Spots"
-        title="Simple corners that photograph well"
-        subtitle="A few places regulars like to shoot from, with suggested times and angles you can adapt to your own plans."
-        id="photo-trail"
+        eyebrow="Choose Your Visit"
+        title="Lean into adventure or linger with your camera."
+        subtitle="Start with the option that feels right today—you can always drift from one mood into the other once you arrive."
       >
-        <div className="experience-grid">
-          {featuredSpots.map((spot) => (
-            <article key={spot.id} className="photo-spot-card">
-              <img src={spot.image} alt={spot.name} />
-              <h3>{spot.name}</h3>
-              <p>{spot.reelIdea}</p>
-              <ul>
-                <li>
-                  <strong>Best time:</strong> {spot.bestTime}
-                </li>
-                <li>
-                  <strong>Tide:</strong> {spot.tide}
-                </li>
-                <li>
-                  <strong>Wind:</strong> {spot.wind}
-                </li>
-                <li>
-                  <strong>Angle:</strong> {spot.angle}
-                </li>
-              </ul>
-              <p className="tag">{spot.hashtag}</p>
+        <div className="lane-grid">
+          {laneChoices.map((lane) => (
+            <article key={lane.id} className="card lane-card">
+              <h3>{lane.title}</h3>
+              <p>{lane.summary}</p>
+              <Link to={lane.to} className="button button-secondary">
+                {lane.cta}
+              </Link>
             </article>
           ))}
-        </div>
-        <div className="cta-row">
-          <Link to="/photo-spots" className="button button-secondary">
-            Explore all photo spots
-          </Link>
         </div>
       </Section>
 
       <Section
-        eyebrow="Experiences"
-        title="Adventure layers built for reels and memory reels"
-        subtitle="Swap between adrenaline and calm without leaving the property."
+        eyebrow="For adventurous days"
+        title="Experiences built around the creek"
+        subtitle="Start with kayaking, then graduate into longer sessions and slow-water adventures."
       >
         <div className="experience-grid">
           {featuredExperiences.map((experience) => (
@@ -143,16 +142,53 @@ const HomePage = () => {
             View all experiences
           </Link>
         </div>
+        <ul className="flow-list" aria-label="Adventure flow">
+          {adventureFlow.map((step) => (
+            <li key={step}>{step}</li>
+          ))}
+        </ul>
       </Section>
 
-      <Section eyebrow="Why Sans Souci" title="Chennai’s golden hour secret" id="why">
-        <div className="grid grid-2">
-          {whySansSouci.map((reason) => (
-            <article key={reason} className="card">
-              <p>{reason}</p>
+      <Section
+        eyebrow="For unhurried pauses"
+        title="Photo spots along the water"
+        subtitle="A quick scenic visit with a few corners that photograph well, plus simple timing and angle suggestions."
+        id="photo-trail"
+      >
+        <div className="experience-grid">
+          {featuredSpots.map((spot) => (
+            <article key={spot.id} className="photo-spot-card">
+              <img src={spot.image} alt={spot.name} />
+              <h3>{spot.name}</h3>
+              <p>{spot.reelIdea}</p>
+              <ul>
+                <li>
+                  <strong>Best time:</strong> {spot.bestTime}
+                </li>
+                <li>
+                  <strong>Tide:</strong> {spot.tide}
+                </li>
+                <li>
+                  <strong>Wind:</strong> {spot.wind}
+                </li>
+                <li>
+                  <strong>Angle:</strong> {spot.angle}
+                </li>
+              </ul>
+              <p className="tag">{spot.hashtag}</p>
             </article>
           ))}
         </div>
+        <div className="cta-row">
+          <Link to="/photo-spots" className="button button-secondary">
+            Explore all photo spots
+          </Link>
+        </div>
+        <ul className="flow-list" aria-label="Photo spots flow">
+          {photoFlow.map((step) => (
+            <li key={step}>{step}</li>
+          ))}
+        </ul>
       </Section>
 
       <Section

@@ -22,17 +22,79 @@ export type PhotoSpot = {
 };
 
 export const heroContent = {
-  headline: 'Chennai’s creekside escape for small crews',
+  headline: "North Chennai's hottest Instagram location.",
   subhead:
-    'Sans Souci is a simple, private corner of Ennore Creek with shade, basic facilities, and kayaks—a rustic spot that film crews, friends, and small teams use as a backdrop for their own plans.',
-  primaryCta: 'Explore Photo Spots',
-  secondaryCta: 'Plan This Weekend',
+    'Creekside trees, warm tide light, and weathered beach furniture—Ennore Creek is built for photos. Sunrise, sunset, or a slow afternoon, the space keeps giving you backdrops.',
+  primaryCta: 'Buy entry pass',
+  secondaryCta: 'Explore kayaking & angling',
   stats: [
     { label: 'Film shoots hosted', value: '100+' },
     { label: 'Minutes from Chennai', value: '30' },
     { label: 'Waterfront acres', value: '6' }
   ]
 };
+
+export const placeProof = [
+  {
+    title: 'Ennore Creek waterfront',
+    detail: 'A calm backwater edge with direct access for kayaking, angling, and cinematic waterline shots.'
+  },
+  {
+    title: 'Near the Bay in minutes',
+    detail: 'Local boat loops can connect you from creek stillness to open-water energy quickly.'
+  },
+  {
+    title: 'Film-location heritage',
+    detail: 'More than 100 South Indian films have used this property and its creekside textures.'
+  },
+  {
+    title: 'Rustic by design',
+    detail: 'Sand, decks, mangroves, and sky do the heavy lifting—no artificial set dressing needed.'
+  }
+];
+
+export const laneChoices = [
+  {
+    id: 'adventure',
+    title: 'Creek adventures',
+    summary: 'Kayaking and angling with tide-aware windows, with time left over for sunsets and slow conversations.',
+    cta: 'Explore adventures',
+    to: '/experiences'
+  },
+  {
+    id: 'photo',
+    title: 'Photo spots & pauses',
+    summary: 'A shorter scenic visit with easy timings, angles, and places to just stand still and look.',
+    cta: 'Browse photo spots',
+    to: '/photo-spots'
+  }
+];
+
+export const adventureFlow = [
+  'Check tide and light windows first.',
+  'Start with short kayak loops and angling drifts.',
+  'Close with sunset photo passes before heading out.'
+];
+
+export const photoFlow = [
+  'Arrive for a short scenic pause on the creek.',
+  'Wander through the timed spot list with simple angles to try.',
+  'If it clicks, plan a longer adventure session next time.'
+];
+
+export const experiencePracticals = [
+  'Wear quick-dry clothing and grippy footwear.',
+  'Carry hydration, sun cover, and a dry pouch for phones/cameras.',
+  'Plan 90-180 minutes for paddling + bank breaks.',
+  'Beginners can start with short loops and rest intervals.'
+];
+
+export const photoSpotGuidelines = [
+  'Entry to the property is handled at the gate—one pass covers your time on site.',
+  'Most scenic visits feel unhurried in a 60–90 minute window.',
+  'Follow crew guidance around active docks and boat movement.',
+  'Pack light and treat the space gently; this is a working family waterfront.'
+];
 
 export const reelGrid = [
   { id: 'reel-1', label: 'Kayak Golden Hour', image: '/media/spot-kayak.jpg' },
