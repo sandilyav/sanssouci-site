@@ -226,15 +226,15 @@ export const membershipBenefits = [
 ];
 export const weeklyEvents = [
     {
-        title: 'Weekend creator camp (idea)',
+        title: 'Weekend creator camp',
         detail: 'Two days where a small crew brings their own tents, edits under the shed roof, and paddles when the light is right.'
     },
     {
-        title: 'Tide-aware kayak day (idea)',
+        title: 'Tide-aware kayak day',
         detail: 'Friends coordinate arrival with a good tide, share kayaks, and trade filming turns from the jetty and waterline.'
     },
     {
-        title: 'Small waterfront gathering (idea)',
+        title: 'Small waterfront gathering',
         detail: 'A modest celebration where guests bring their own decor, food, and music while the creek and sky stay centre-stage.'
     }
 ];
