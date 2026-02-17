@@ -1,6 +1,6 @@
 Sans Souci Website Redesign
 
-Project Charter – Version 2 (Instagram-First Positioning)
+Project Charter – Version 2 (Adventure-First With Transactional Entry Pass)
 
 Location: Ennore Creek
 Primary Market: Chennai
@@ -39,13 +39,17 @@ The redesigned site will reposition Sans Souci from:
 
 To:
 
-“Chennai’s Most Underrated Instagram-Worthy Micro-Adventure Spot”
+“Chennai’s Creekside Micro-Adventure Campus”
+
+With a secondary on-ramp:
+
+“Entry Pass for a quick scenic visit + selfie spots (transactional, low commitment)”
 
 Core Identity:
-	•	Aesthetic but authentic
-	•	Adventurous but safe
+	•	Adventure-first and skill-forward (kayaking now; angling next)
+	•	Aesthetic but authentic (nature, water, light)
 	•	Close to the city but emotionally distant from it
-	•	A backdrop for memories, reels, and identity expression
+	•	A clear progression from casual visitors to booked experiences
 
 ⸻
 
@@ -60,24 +64,24 @@ The website must feel:
 
 Primary emotional trigger:
 
-“This will look insane on my feed.”
+“This is an actual adventure campus close to Chennai.”
 
 Secondary trigger:
 
-“This is close enough to do this weekend.”
+“I can start with a simple Entry Pass visit today.”
 
 ⸻
 
 1.4 Target Audience
 
 Primary:
+	•	Adventure seekers (kayaking now; angling next)
 	•	Gen Z (18–28)
 	•	Young professionals (22–35)
 	•	College friend groups
-	•	Birthday & celebration planners
-	•	Micro-influencers / creators
 
 Secondary:
+	•	Casual visitors / couples / friend groups seeking a quick scenic stop (Entry Pass)
 	•	Corporate offsite planners
 	•	Recreational anglers
 
@@ -91,7 +95,8 @@ Release 0 establishes the structural and visual foundation.
 
 Focus:
 	•	Mobile-first layout
-	•	Instagram-first positioning
+	•	Adventure-first positioning
+	•	Transactional Entry Pass on-ramp
 	•	Visual storytelling
 	•	Clear navigation
 	•	Performance optimization
@@ -117,19 +122,31 @@ Primary Navigation
 
 2.2 Homepage Structure (Mobile-First)
 
-Section 1 – Hero (Instagram-Led)
+Two-track model:
+
+Sans Souci serves two distinct visitor intents from day one:
+
+Track A (Primary): Adventure / Experiences
+	•	Identity: micro-adventure campus
+	•	Primary conversion: booking intent (starting with kayaking)
+
+Track B (Secondary): Photo Spots
+	•	Identity: quick scenic visit + selfie stations
+	•	Conversion: low-commitment footfall via an Entry Pass
+
+Important: “Entry Pass” is transactional framing and pricing for Track B, not a separate landing page name.
+
+Section 1 – Hero (Adventure-First)
 
 Headline Example:
 
-🌅 Your Next Reel Starts Here.
-🌊 Creekside. Cinematic.
-📍 30 Minutes From Chennai.
+Creekside micro-adventure campus near Chennai.
 
 Primary CTA:
-	•	Explore Photo Spots
+	•	Plan an Adventure
 
 Secondary CTA:
-	•	Plan This Weekend
+	•	Photo Spots (Entry Pass)
 
 Mobile sticky bottom bar:
 	•	Call
@@ -278,6 +295,10 @@ Example:
 🌬 Wind: 7 km/h – Smooth water
 🌅 Golden Hour: 5:42 – 6:18 PM
 📸 Reflection Rating: 8/10
+
+Entry Pass note:
+
+When conditions are not ideal for water, the site should still recommend an Entry Pass quick visit for photo spots and a relaxed walk.
 
 Data Sources:
 	•	Marine tide API
@@ -438,7 +459,8 @@ Secondary KPIs:
 Sans Souci becomes:
 	•	Chennai’s go-to golden hour location
 	•	A tide-aware professional waterfront destination
-	•	A youth-friendly creator escape
+	•	A credible micro-adventure campus (kayaking now; angling next)
+	•	A low-commitment Entry Pass stop that feeds future bookings
 	•	A credible and safe recreational hub
 	•	A place where adventure meets aesthetic
 
@@ -448,6 +470,8 @@ Final Vision Statement
 
 Sans Souci is not just a waterfront property.
 
-It is a live, tide-aware, golden-hour-powered creator playground.
+It is a live, tide-aware, creekside micro-adventure campus.
 
 Every visit to the website should feel like checking the light before stepping into the shot.
+
+--
