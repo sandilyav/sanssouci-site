@@ -17,7 +17,7 @@ import {
   contactInfo
 } from '../data/content';
 
-const heroBackdrops = ['/backdrops/Backdrop1.jpeg', '/backdrops/Backdrop2.jpeg', '/backdrops/Backdrop3.jpeg'];
+const heroBackdrops = ['/backdrops/Backdrop1.webp', '/backdrops/Backdrop2.webp', '/backdrops/Backdrop3.webp'];
 
 const HomePage = () => {
   const [heroIndex, setHeroIndex] = useState(0);
