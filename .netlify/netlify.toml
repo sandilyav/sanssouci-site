@@ -1,0 +1,33 @@
+headers = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[[plugins]]
+origin = "config"
+package = "@netlify/plugin-lighthouse"
+
+[plugins.inputs]
+
+[build]
+publish = "/root/.openclaw/workspace-grady/sanssouci-site/dist"
+publishOrigin = "config"
+commandOrigin = "config"
+command = "npm run build"
+base = "/root/.openclaw/workspace-grady/sanssouci-site"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]

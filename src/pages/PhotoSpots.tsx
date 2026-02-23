@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 import Section from '../components/ui/Section';
 import { photoSpots, photoSpotGuidelines } from '../data/content';
 
 const PhotoSpotsPage = () => (
   <>
+    <Helmet>
+      <title>Photo Spots | Sans Souci - Creek Photography near Chennai</title>
+      <meta name="description" content="Discover scenic photo spots at Sans Souci: sunrise decks, sunset viewpoints, creek reflections, and Instagram-worthy backdrops at Ennore backwaters." />
+      <link rel="canonical" href="https://sanssouci.in/photo-spots" />
+    </Helmet>
     <Section
       eyebrow="Photo spots"
       title="A scenic creek stop you can do in one short visit"

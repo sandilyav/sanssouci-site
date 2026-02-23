@@ -1,8 +1,16 @@
+import { Helmet } from 'react-helmet-async';
+
 import Section from '../components/ui/Section';
 import { contactInfo, travelCopy } from '../data/content';
 
 const LocationPage = () => (
-  <Section
+  <>
+    <Helmet>
+      <title>Location | Sans Souci - Directions to Ennore Creek</title>
+      <meta name="description" content="Find Sans Souci at 399 Kathivakkam High Road, Ennore. Directions, parking info, and map to reach the creekside micro-adventure campus near Chennai." />
+      <link rel="canonical" href="https://sanssouci.in/location" />
+    </Helmet>
+    <Section
     eyebrow="Location"
     title="399, Kathivakkam High Road"
     subtitle="Private gate access with secure parking and shuttle docks."
@@ -34,6 +42,7 @@ const LocationPage = () => (
       </div>
     </div>
   </Section>
+  </>
 );
 
 export default LocationPage;
