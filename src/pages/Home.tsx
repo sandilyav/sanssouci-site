@@ -73,7 +73,7 @@ const HomePage = () => {
         <div className="grid grid-2">
           {placeProof.map((proof) => (
             <article key={proof.title} className="card">
-              <h3>{proof.title}</h3>
+              <h2>{proof.title}</h2>
               <p>{proof.detail}</p>
             </article>
           ))}
@@ -88,7 +88,7 @@ const HomePage = () => {
         <div className="lane-grid">
           {laneChoices.map((lane) => (
             <article key={lane.id} className="card lane-card">
-              <h3>{lane.title}</h3>
+              <h2>{lane.title}</h2>
               <p>{lane.summary}</p>
               <Link to={lane.to} className="button button-secondary">
                 {lane.cta}
@@ -107,7 +107,7 @@ const HomePage = () => {
           {featuredExperiences.map((experience) => (
             <article key={experience.id} className="card experience-card">
               <img src={experience.image} alt={experience.name} />
-              <h3>{experience.name}</h3>
+              <h2>{experience.name}</h2>
               <div className="experience-card__body">
                 <p>{experience.summary}</p>
               </div>
@@ -159,7 +159,7 @@ const HomePage = () => {
           {featuredSpots.map((spot) => (
             <article key={spot.id} className="photo-spot-card">
               <img src={spot.image} alt={spot.name} />
-              <h3>{spot.name}</h3>
+              <h2>{spot.name}</h2>
               <p>{spot.reelIdea}</p>
               <ul>
                 <li>
@@ -202,7 +202,7 @@ const HomePage = () => {
               {planTimeline.map((slot) => (
                 <div key={slot.time} className="timeline-item">
                   <time>{slot.time}</time>
-                  <h3>{slot.title}</h3>
+                  <h2>{slot.title}</h2>
                   <p>{slot.detail}</p>
                 </div>
               ))}
@@ -251,7 +251,7 @@ const HomePage = () => {
             </button>
           </form>
           <div className="card">
-            <h3>Talk to us now</h3>
+            <h2>Talk to us now</h2>
             {contactInfo.phones.map((phone) => (
               <p key={phone}>
                 <a href={`tel:${phone.replace(/\s|\-/g, '')}`}>{phone}</a>
