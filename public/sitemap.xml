@@ -45,13 +45,13 @@
   </url>
 
   <url>
-    <loc>https://sanssouci.in/location</loc>
+    <loc>https://sanssouci.in/location/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://sanssouci.in/contact</loc>
+    <loc>https://sanssouci.in/contact/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
