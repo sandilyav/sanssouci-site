@@ -1,8 +1,16 @@
+import { Helmet } from 'react-helmet-async';
+
 import Section from '../components/ui/Section';
 import { contactInfo } from '../data/content';
 
 const ContactPage = () => (
-  <Section
+  <>
+    <Helmet>
+      <title>Contact | Sans Souci - Book Your Creek Adventure</title>
+      <meta name="description" content="Contact Sans Souci for bookings, enquiries, and collaborations. Phone, email, and quick response for your Ennore creek adventure near Chennai." />
+      <link rel="canonical" href="https://sanssouci.in/contact" />
+    </Helmet>
+    <Section
     eyebrow="Contact"
     title="Talk to Sans Souci"
     subtitle="Same-day responses for enquiries, bookings, and creator collaborations."
@@ -38,6 +46,7 @@ const ContactPage = () => (
       </div>
     </div>
   </Section>
+  </>
 );
 
 export default ContactPage;

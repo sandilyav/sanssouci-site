@@ -1,8 +1,16 @@
+import { Helmet } from 'react-helmet-async';
+
 import Section from '../components/ui/Section';
 import { planTimeline, travelCopy } from '../data/content';
 
 const PlanVisitPage = () => (
-  <Section
+  <>
+    <Helmet>
+      <title>Plan Your Visit | Sans Souci - Directions & Timings</title>
+      <meta name="description" content="Plan your visit to Sans Souci: directions from Chennai, best time slots, parking info, and sample itineraries for creek adventures at Ennore backwaters." />
+      <link rel="canonical" href="https://sanssouci.in/plan-visit" />
+    </Helmet>
+    <Section
     eyebrow="Plan Your Visit"
     title="Example timeline from city to creek"
     subtitle="One way a crew could use an evening slot—purely as a guide while you plan your own visit."
@@ -34,6 +42,7 @@ const PlanVisitPage = () => (
       </div>
     </div>
   </Section>
+  </>
 );
 
 export default PlanVisitPage;

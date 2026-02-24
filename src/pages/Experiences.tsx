@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 import Section from '../components/ui/Section';
 import { experiences, experiencePracticals } from '../data/content';
@@ -13,6 +14,11 @@ const ExperiencesPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Experiences | Sans Souci - Kayaking, Angling & Creek Adventures</title>
+        <meta name="description" content="Discover creek adventures at Sans Souci: kayaking, paddle boarding, angling, camping, and sunset sessions at Ennore backwaters near Chennai." />
+        <link rel="canonical" href="https://sanssouci.in/experiences" />
+      </Helmet>
       <Section
         eyebrow="Creek adventures"
         title="Start with water. Let the rest of the day fall into place."

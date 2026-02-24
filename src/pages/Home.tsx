@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 import BestTimeToVisitPanel from '../components/ui/BestTimeToVisitPanel';
 import Section from '../components/ui/Section';
@@ -36,6 +37,15 @@ const HomePage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Sans Souci | Creekside Micro-Adventure near Chennai</title>
+        <meta name="description" content="Escape to Sans Souci, a creekside micro-adventure campus near Chennai. Kayaking, photography spots, sunset sessions, and serene creek views at Ennore backwaters." />
+        <meta property="og:title" content="Sans Souci | Creekside Micro-Adventure" />
+        <meta property="og:description" content="Kayaking, photography, and creek adventures at Ennore backwaters near Chennai." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://sanssouci.in" />
+        <link rel="canonical" href="https://sanssouci.in" />
+      </Helmet>
       <section
         className="section hero hero--photo hero--photo-rotating"
         id="hero"
@@ -106,7 +116,7 @@ const HomePage = () => {
         <div className="experience-grid">
           {featuredExperiences.map((experience) => (
             <article key={experience.id} className="card experience-card">
-              <img src={experience.image} alt={experience.name} />
+              <img src={experience.image} alt={`${experience.name} at Sans Souci creek`} />
               <h2>{experience.name}</h2>
               <div className="experience-card__body">
                 <p>{experience.summary}</p>
@@ -158,7 +168,7 @@ const HomePage = () => {
         <div className="experience-grid">
           {featuredSpots.map((spot) => (
             <article key={spot.id} className="photo-spot-card">
-              <img src={spot.image} alt={spot.name} />
+              <img src={spot.image} alt={`${spot.name} - photo spot at Sans Souci`} />
               <h2>{spot.name}</h2>
               <p>{spot.reelIdea}</p>
               <ul>

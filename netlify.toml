@@ -5,3 +5,6 @@
 
 [[plugins]]
 package = "@netlify/plugin-lighthouse"
+
+[[prerender]]
+routes = ["/", "/experiences", "/photo-spots", "/plan", "/events", "/gallery", "/about", "/location/", "/contact/"]
