@@ -6,8 +6,8 @@ import { contactInfo, travelCopy } from '../data/content';
 const LocationPage = () => (
   <>
     <Helmet>
-      <title>Discover Your Ideal Location for Adventure</title>
-      <meta name="description" content="Explore the best locations for your next adventure. Find hidden gems and popular spots tailored to your interests." />
+      <title>Discover Your Perfect Location | Find Your Spot Today</title>
+      <meta name="description" content="Explore top locations tailored for your needs. Find the perfect spot that suits your lifestyle and preferences today!" />
       <link rel="canonical" href="https://sanssouci.in/location" />
     </Helmet>
     <Section
