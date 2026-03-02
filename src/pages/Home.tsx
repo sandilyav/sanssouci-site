@@ -38,10 +38,10 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Sans Souci | Creekside Micro-Adventure near Chennai</title>
-        <meta name="description" content="Escape to Sans Souci, a creekside micro-adventure campus near Chennai. Kayaking, photography spots, sunset sessions, and serene creek views at Ennore backwaters." />
-        <meta property="og:title" content="Sans Souci | Creekside Micro-Adventure" />
-        <meta property="og:description" content="Kayaking, photography, and creek adventures at Ennore backwaters near Chennai." />
+        <title>Explore the Beauty of Sans Souci Gardens</title>
+        <meta name="description" content="Discover the stunning landscapes and history of Sans Souci Gardens. A must-visit destination for nature lovers and history enthusiasts alike." />
+        <meta property="og:title" content="Explore the Beauty of Sans Souci Gardens" />
+        <meta property="og:description" content="Discover the stunning landscapes and history of Sans Souci Gardens. A must-visit destination for nature lovers and history enthusiasts alike." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://sanssouci.in" />
         <link rel="canonical" href="https://sanssouci.in" />

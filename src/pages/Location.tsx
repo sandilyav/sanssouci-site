@@ -6,8 +6,8 @@ import { contactInfo, travelCopy } from '../data/content';
 const LocationPage = () => (
   <>
     <Helmet>
-      <title>Location | Sans Souci - Directions to Ennore Creek</title>
-      <meta name="description" content="Find Sans Souci at 399 Kathivakkam High Road, Ennore. Directions, parking info, and map to reach the creekside micro-adventure campus near Chennai." />
+      <title>Discover Your Perfect Location | Find Your Spot Today</title>
+      <meta name="description" content="Explore top locations tailored for your needs. Find the perfect spot that suits your lifestyle and preferences today!" />
       <link rel="canonical" href="https://sanssouci.in/location" />
     </Helmet>
     <Section

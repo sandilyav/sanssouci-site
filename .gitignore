@@ -3,3 +3,11 @@ node_modules/
 
 # macOS
 .DS_Store
+.aider*
+.env
+.env
+.env
+.env
+.env
+.env
+.env
